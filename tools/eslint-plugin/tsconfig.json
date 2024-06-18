@@ -1,0 +1,11 @@
+{
+  "extends": "../../tsconfig-code-quality.json",
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "outDir": "dist",
+    "baseUrl": "./",
+    "paths": { "src": ["src"] }
+  },
+  "include": ["src/**/*"]
+}

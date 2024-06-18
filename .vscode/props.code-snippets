@@ -1,0 +1,7 @@
+{
+  "dc": {
+    "scope": "typescript,typescriptreact",
+    "prefix": "dc",
+    "body": ["const { $0 } = ${1:props};"]
+  }
+}

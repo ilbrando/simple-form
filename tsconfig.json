@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig-code-quality.json",
+  "compilerOptions": {
+    "module": "ESNext",
+    "lib": ["ESNext"],
+    "target": "ESNext",
+    "moduleDetection": "force",
+    "moduleResolution": "Bundler",
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true,
+
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": false,
+    "jsx": "react-jsx"
+  }
+}

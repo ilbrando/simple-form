@@ -1,0 +1,33 @@
+{
+  "name": "@ilbrando/example-joy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "eslint": "eslint"
+  },
+  "dependencies": {
+    "@ilbrando/utils": "workspace:*",
+    "@ilbrando/simple-form": "workspace:*",
+    "@ilbrando/simple-form-joy": "workspace:*",
+    "react": "^18",
+    "react-dom": "^18",
+    "@mui/joy": "^5.0.0-beta.36",
+    "@mui/icons-material": "^5",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11"
+  },
+  "devDependencies": {
+    "@ilbrando/eslint-plugin": "workspace:*",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "~9.4.0",
+    "typescript": "~5.4.5",
+    "vite": "~5.2.0",
+    "@vitejs/plugin-react": "~4.2.1",
+    "globals": "~15.4.0"
+  }
+}

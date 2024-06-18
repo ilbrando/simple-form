@@ -1,0 +1,52 @@
+{
+  "name": "@ilbrando/simple-form",
+  "version": "1.0.0-rc1",
+  "description": "Simple form tools for react",
+  "license": "MIT",
+  "author": {
+    "name": "ilbrando"
+  },
+  "keywords": [
+    "react",
+    "react-form"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilbrando/simple-form.git",
+    "directory": "packages/simple-form"
+  },
+  "homepage": "https://github.com/ilbrando/simple-form",
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/index.d.ts",
+  "exports": {
+    "require": "./lib/cjs/index.js",
+    "import": "./lib/esm/index.js",
+    "types": "./lib/index.d.ts"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --silent && tsc -p tsconfig-declarations.json",
+    "eslint": "eslint"
+  },
+  "devDependencies": {
+    "@types/react": "^18",
+    "@ilbrando/eslint-plugin": "workspace:*",
+    "eslint": "~9.4.0",
+    "typescript": "~5.4.5",
+    "@rollup/plugin-typescript": "~11.1.6",
+    "@rollup/plugin-node-resolve": "~15.2.3",
+    "@rollup/plugin-commonjs": "~25.0.8",
+    "rollup": "~4.18.0",
+    "rollup-plugin-peer-deps-external": "~2.2.4",
+    "tslib": "~2.6.2"
+  },
+  "dependencies": {
+    "@ilbrando/utils": "workspace:*"
+  },
+  "peerDependencies": {
+    "react": "^18"
+  }
+}
