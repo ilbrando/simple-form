@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "strict": true,
+
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "noUnusedParameters": false,
+    "noUnusedLocals": false,
+    "noImplicitOverride": true,
+    "removeComments": false,
+
+    "pretty": true
+  }
+}
