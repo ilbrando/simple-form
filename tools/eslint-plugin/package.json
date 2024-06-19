@@ -6,6 +6,12 @@
   "author": {
     "name": "ilbrando"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ilbrando/simple-form.git",
+    "directory": "tools/eslint-plugin"
+  },
+  "homepage": "https://github.com/ilbrando/simple-form",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
