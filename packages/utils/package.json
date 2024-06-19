@@ -1,6 +1,6 @@
 {
   "name": "@ilbrando/utils",
-  "version": "1.0.0-rc1",
+  "version": "1.0.0",
   "description": "General typescript utilities",
   "license": "MIT",
   "author": {
