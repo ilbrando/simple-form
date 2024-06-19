@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form-joy",
+      "comment": "First release",
+      "type": "major"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-joy"
+}
