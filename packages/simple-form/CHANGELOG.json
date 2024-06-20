@@ -1,0 +1,28 @@
+{
+  "name": "@ilbrando/simple-form",
+  "entries": [
+    {
+      "version": "1.0.1",
+      "tag": "@ilbrando/simple-form_v1.0.1",
+      "date": "Thu, 20 Jun 2024 13:16:18 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "First release"
+          },
+          {
+            "comment": "First release"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `1.0.1`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/eslint-plugin\" to `1.0.1`"
+          }
+        ]
+      }
+    }
+  ]
+}
