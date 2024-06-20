@@ -3,7 +3,7 @@
     {
       "packageName": "@ilbrando/simple-form-joy",
       "comment": "First release",
-      "type": "major"
+      "type": "patch"
     }
   ],
   "packageName": "@ilbrando/simple-form-joy"
