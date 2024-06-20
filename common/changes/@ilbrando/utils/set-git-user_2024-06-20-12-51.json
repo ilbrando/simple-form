@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/utils",
+      "comment": "First release",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/utils"
+}
