@@ -3,7 +3,7 @@
     {
       "packageName": "@ilbrando/eslint-plugin",
       "comment": "First release",
-      "type": "major"
+      "type": "patch"
     }
   ],
   "packageName": "@ilbrando/eslint-plugin"

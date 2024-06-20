@@ -1,10 +1,10 @@
 {
   "changes": [
     {
-      "packageName": "@ilbrando/simple-form",
+      "packageName": "@ilbrando/utils",
       "comment": "First release",
       "type": "patch"
     }
   ],
-  "packageName": "@ilbrando/simple-form"
+  "packageName": "@ilbrando/utils"
 }

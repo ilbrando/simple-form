@@ -2,8 +2,8 @@
   "changes": [
     {
       "packageName": "@ilbrando/eslint-plugin",
-      "comment": "Small changes to package.json",
-      "type": "none"
+      "comment": "First release",
+      "type": "patch"
     }
   ],
   "packageName": "@ilbrando/eslint-plugin"

@@ -3,7 +3,7 @@
     {
       "packageName": "@ilbrando/utils",
       "comment": "First release",
-      "type": "major"
+      "type": "patch"
     }
   ],
   "packageName": "@ilbrando/utils"
