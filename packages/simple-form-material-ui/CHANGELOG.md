@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form-material-ui
 
-This log was last generated on Sat, 22 Jun 2024 12:44:47 GMT and should not be manually modified.
+This log was last generated on Sat, 22 Jun 2024 14:04:48 GMT and should not be manually modified.
+
+## 3.0.0
+Sat, 22 Jun 2024 14:04:48 GMT
+
+### Breaking changes
+
+- Renamed form components
 
 ## 2.0.0
 Sat, 22 Jun 2024 12:44:47 GMT

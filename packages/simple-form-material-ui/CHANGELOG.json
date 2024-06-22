@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form-material-ui",
   "entries": [
     {
+      "version": "3.0.0",
+      "tag": "@ilbrando/simple-form-material-ui_v3.0.0",
+      "date": "Sat, 22 Jun 2024 14:04:48 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Renamed form components"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@ilbrando/simple-form-material-ui_v2.0.0",
       "date": "Sat, 22 Jun 2024 12:44:47 GMT",

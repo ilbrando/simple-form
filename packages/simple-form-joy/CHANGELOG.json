@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.0.0",
+      "tag": "@ilbrando/simple-form-joy_v2.0.0",
+      "date": "Sat, 22 Jun 2024 14:04:48 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Renamed form components"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.1",
       "tag": "@ilbrando/simple-form-joy_v1.0.1",
       "date": "Thu, 20 Jun 2024 13:16:18 GMT",
