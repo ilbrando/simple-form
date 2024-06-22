@@ -11,7 +11,7 @@ import { AutocompleteOption } from "./form-autocomplete-types";
 
 type FormValue = string | number;
 
-export type FormAutocompleteFieldProps<TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>> = OmitSafe<
+export type FormAutocompleteProps<TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>> = OmitSafe<
   AutocompleteProps<TFormValue, undefined, undefined, undefined>,
   "value" | "onChange" | "options" | "renderOption" | "multiple"
 > &
@@ -19,7 +19,7 @@ export type FormAutocompleteFieldProps<TFields, TFormValue extends FormValue, TF
     options: AutocompleteOption<TFormValue>[];
   };
 
-export const FormAutocompleteField = function <TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>>(props: FormAutocompleteFieldProps<TFields, TFormValue, TFieldName>) {
+export const FormAutocomplete = function <TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>>(props: FormAutocompleteProps<TFields, TFormValue, TFieldName>) {
   const { formManager, fieldName, disabled, options, label, size, reserveSpaceForValidationMessage, ...rest } = props;
 
   const editor = getEditor<TFields, TFormValue>(formManager, fieldName, disabled);

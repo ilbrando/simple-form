@@ -8,12 +8,12 @@ import { FormFieldBaseProps } from "../types";
 
 type FormValue = string;
 
-export type FormTextFieldProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<InputProps, "value" | "error" | "required" | "onChange"> &
+export type FormTextProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<InputProps, "value" | "error" | "required" | "onChange"> &
   FormFieldBaseProps<TFields, FormValue, TFieldName> & {
     textTransform?: "lower-case" | "upper-case";
   };
 
-export const FormTextField = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormTextFieldProps<TFields, TFieldName>) {
+export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormTextProps<TFields, TFieldName>) {
   const { formManager, fieldName, textTransform, disabled, label, size, reserveSpaceForValidationMessage, ...rest } = props;
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);

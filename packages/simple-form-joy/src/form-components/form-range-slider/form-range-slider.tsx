@@ -11,9 +11,9 @@ export type FormRangeSliderValue = {
   to: number;
 };
 
-type FormRangeSliderFieldProps<TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>> = OmitSafe<SliderProps, "value" | "onChange"> & FormFieldBaseProps<TFields, FormRangeSliderValue, TFieldName>;
+type FormRangeSliderProps<TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>> = OmitSafe<SliderProps, "value" | "onChange"> & FormFieldBaseProps<TFields, FormRangeSliderValue, TFieldName>;
 
-export const FormRangeSliderField = function <TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>>(props: FormRangeSliderFieldProps<TFields, TFieldName>) {
+export const FormRangeSlider = function <TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>>(props: FormRangeSliderProps<TFields, TFieldName>) {
   const { formManager, fieldName, label, size, disabled, reserveSpaceForValidationMessage, ...rest } = props;
 
   const editor = getEditor<TFields, FormRangeSliderValue>(formManager, fieldName, disabled);

@@ -2,15 +2,15 @@ import type { Meta, StoryObj } from "@storybook/react";
 import { useFormDefinition, getFormManager, useValidationRules } from "@ilbrando/simple-form";
 import {
   AutocompleteOption,
-  FormAutocompleteField,
-  FormAutocompleteMultipleField,
+  FormAutocomplete,
+  FormAutocompleteMultiple,
   FormCheckbox,
-  FormNumberField,
+  FormNumber,
   FormRadioGroup,
-  FormRangeSliderField,
+  FormRangeSlider,
   FormRangeSliderValue,
   FormSwitch,
-  FormTextField,
+  FormText,
   RadioGroupOption
 } from "@ilbrando/simple-form-joy";
 import { Box, Button, ThemeProvider, extendTheme } from "@mui/joy";
@@ -115,12 +115,12 @@ const FormStory = (props: FormStoryProps) => {
     <ThemeProvider theme={theme}>
       <Box display="grid" gridTemplateColumns="400px auto" gap={2}>
         <Box gridColumn="1" display="flex" flexDirection="column" gap={reserveSpaceForValidationMessage ? 0 : 1}>
-          <FormTextField formManager={fm} fieldName="textField" label="Text Field" disabled={isDisabled} size={size} />
-          <FormNumberField formManager={fm} fieldName="numberField" label="Number Field" disabled={isDisabled} size={size} />
-          <FormAutocompleteField formManager={fm} fieldName="autocompleteField" label="Autocomplete Field" options={autocompleteOptions} disabled={isDisabled} size={size} />
-          <FormAutocompleteMultipleField formManager={fm} fieldName="autocompleteMultipleField" label="Autocomplete Field (multiple)" options={autocompleteOptions} disabled={isDisabled} size={size} />
+          <FormText formManager={fm} fieldName="textField" label="Text Field" disabled={isDisabled} size={size} />
+          <FormNumber formManager={fm} fieldName="numberField" label="Number Field" disabled={isDisabled} size={size} />
+          <FormAutocomplete formManager={fm} fieldName="autocompleteField" label="Autocomplete Field" options={autocompleteOptions} disabled={isDisabled} size={size} />
+          <FormAutocompleteMultiple formManager={fm} fieldName="autocompleteMultipleField" label="Autocomplete Field (multiple)" options={autocompleteOptions} disabled={isDisabled} size={size} />
           <FormRadioGroup formManager={fm} fieldName="radiogroupField" label="Radiogroup Field" options={radioGroupOptions} disabled={isDisabled} size={size} />
-          <FormRangeSliderField formManager={fm} fieldName="rangeField" label="Range Slider" min={1} max={10} />
+          <FormRangeSlider formManager={fm} fieldName="rangeField" label="Range Slider" min={1} max={10} />
           <FormSwitch formManager={fm} fieldName="switchField" label="Switch Field" disabled={isDisabled} size={size} />
           <FormCheckbox formManager={fm} fieldName="checkboxField" label="Checkbox Field" disabled={isDisabled} size={size} />
         </Box>

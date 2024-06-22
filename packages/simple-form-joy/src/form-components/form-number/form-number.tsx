@@ -9,11 +9,11 @@ import { FormFieldBaseProps } from "../types";
 
 type FormValue = number;
 
-type FormNumberFieldProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<InputProps, "value" | "error" | "required" | "onChange"> & FormFieldBaseProps<TFields, FormValue, TFieldName>;
+type FormNumberProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<InputProps, "value" | "error" | "required" | "onChange"> & FormFieldBaseProps<TFields, FormValue, TFieldName>;
 
 const isValidValue = (value: string) => /^[-]?(\d+)$/.test(value);
 
-export const FormNumberField = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormNumberFieldProps<TFields, TFieldName>) {
+export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormNumberProps<TFields, TFieldName>) {
   const { formManager, fieldName, disabled, label, size, reserveSpaceForValidationMessage, ...rest } = props;
 
   const { texts } = useLocalization();
