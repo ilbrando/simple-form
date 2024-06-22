@@ -5,34 +5,35 @@ import { Autocomplete, AutocompleteProps, Box, TextField } from "@mui/material";
 
 import { useMuiFormUtils } from "src/utils";
 
-import { FormFieldBaseProps } from "../types";
+import { FormFieldBaseArrayProps } from "../types";
 
 import { AutocompleteOption } from "./form-autocomplete-types";
 
 type FormValue = string | number;
 
-export type FormAutocompleteFieldProps<TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>> = OmitSafe<
-  AutocompleteProps<TFormValue, undefined, undefined, undefined>,
+export type FormAutocompleteMultipleProps<TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue[]>> = OmitSafe<
+  AutocompleteProps<TFormValue, true, undefined, undefined>,
   "value" | "onChange" | "options" | "renderOption" | "renderInput" | "multiple"
 > &
-  FormFieldBaseProps<TFields, TFormValue, TFieldName> & {
+  FormFieldBaseArrayProps<TFields, TFormValue, TFieldName> & {
     label?: string;
     placeholder?: string;
     options: AutocompleteOption<TFormValue>[];
   };
 
-export const FormAutocompleteField = function <TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>>(props: FormAutocompleteFieldProps<TFields, TFormValue, TFieldName>) {
+export const FormAutocompleteMultiple = function <TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue[]>>(props: FormAutocompleteMultipleProps<TFields, TFormValue, TFieldName>) {
   const { formManager, fieldName, disabled, options, label, placeholder, reserveSpaceForValidationMessage, ...rest } = props;
 
   const { effectiveReserveSpaceForValidationMessage } = useMuiFormUtils(reserveSpaceForValidationMessage);
 
-  const editor = getEditor<TFields, TFormValue>(formManager, fieldName, disabled);
+  const editor = getEditor<TFields, TFormValue[]>(formManager, fieldName, disabled);
 
   const optionValues = useMemo(() => options.map(x => x.value), [options]);
 
   return (
     <Autocomplete
-      value={editor.value}
+      multiple
+      value={editor.value ?? []}
       options={optionValues}
       onChange={(_, v, reason) => {
         switch (reason) {
@@ -48,7 +49,7 @@ export const FormAutocompleteField = function <TFields, TFormValue extends FormV
         }
       }}
       disabled={editor.isDisabled}
-      getOptionLabel={option => single(options, x => x.value === option).label}
+      getOptionLabel={optionValue => single(options, x => x.value === optionValue).label}
       renderOption={(rp, option) => (
         <Box component="li" {...rp}>
           {single(options, x => x.value === option).label}

@@ -8,12 +8,12 @@ import { FormFieldBaseProps } from "../types";
 
 type FormValue = string;
 
-export type FormTextFieldProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<TextFieldProps, "value" | "error" | "required" | "helperText" | "onChange"> &
+export type FormTextProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<TextFieldProps, "value" | "error" | "required" | "helperText" | "onChange"> &
   FormFieldBaseProps<TFields, FormValue, TFieldName> & {
     textTransform?: "lower-case" | "upper-case";
   };
 
-export const FormTextField = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormTextFieldProps<TFields, TFieldName>) {
+export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormTextProps<TFields, TFieldName>) {
   const { formManager, fieldName, textTransform, disabled, reserveSpaceForValidationMessage, ...rest } = props;
 
   const { effectiveReserveSpaceForValidationMessage } = useMuiFormUtils(reserveSpaceForValidationMessage);

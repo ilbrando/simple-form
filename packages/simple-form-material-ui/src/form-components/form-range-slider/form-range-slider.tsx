@@ -11,12 +11,12 @@ export type FormRangeSliderValue = {
   to: number;
 };
 
-type FormRangeSliderFieldProps<TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>> = OmitSafe<SliderProps, "value" | "onChange"> &
+type FormRangeSliderProps<TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>> = OmitSafe<SliderProps, "value" | "onChange"> &
   FormFieldBaseProps<TFields, FormRangeSliderValue, TFieldName> & {
     label?: string;
   };
 
-export const FormRangeSliderField = function <TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>>(props: FormRangeSliderFieldProps<TFields, TFieldName>) {
+export const FormRangeSlider = function <TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>>(props: FormRangeSliderProps<TFields, TFieldName>) {
   const { formManager, fieldName, label, disabled, reserveSpaceForValidationMessage, ...rest } = props;
 
   const { effectiveReserveSpaceForValidationMessage } = useMuiFormUtils(reserveSpaceForValidationMessage);

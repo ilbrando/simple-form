@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useFormDefinition, getFormManager, useValidationRules } from "@ilbrando/simple-form";
-import { FormNumberField, FormTextField } from "@ilbrando/simple-form-material-ui";
+import { FormNumber, FormText } from "@ilbrando/simple-form-material-ui";
 import { Box, Button, ThemeProvider, createTheme } from "@mui/material";
 
 type FormFields = {
@@ -40,10 +40,10 @@ const FormStory = () => {
 
   return (
     <Box display="flex" flexDirection="column" gap={1}>
-      <FormTextField formManager={fm} fieldName="name" label="Name" />
-      <FormNumberField formManager={fm} fieldName="age" label="Age" />
-      <FormNumberField formManager={fm} fieldName="age2" label="Disable space for this instance" reserveSpaceForValidationMessage={false} />
-      <FormNumberField formManager={fm} fieldName="age3" label="Age" />
+      <FormText formManager={fm} fieldName="name" label="Name" />
+      <FormNumber formManager={fm} fieldName="age" label="Age" />
+      <FormNumber formManager={fm} fieldName="age2" label="Disable space for this instance" reserveSpaceForValidationMessage={false} />
+      <FormNumber formManager={fm} fieldName="age3" label="Age" />
       <Button onClick={handleSubmit}>Submit</Button>
     </Box>
   );
