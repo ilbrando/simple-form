@@ -8,5 +8,4 @@ Thu, 20 Jun 2024 13:16:18 GMT
 ### Patches
 
 - First release
-- First release
 
