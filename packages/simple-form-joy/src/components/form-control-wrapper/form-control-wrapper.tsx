@@ -3,7 +3,7 @@ import { hasValue } from "@ilbrando/utils";
 import { FormControl, FormHelperText, FormLabel } from "@mui/joy";
 
 import { useJoyFormUtils } from "src/utils";
-import { FormFieldBaseSharedProps } from "src/form-fields/types";
+import { FormFieldBaseSharedProps } from "src/form-components/types";
 
 export type FormControlWrapperProps = FormFieldBaseSharedProps & {
   isRequired: boolean;

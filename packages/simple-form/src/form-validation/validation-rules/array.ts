@@ -1,4 +1,5 @@
 import { useLocalization } from "src/localization";
+
 import { Validator } from "../validation-types";
 
 export const useArrayValidationRules = () => {

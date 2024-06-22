@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { fn } from "@storybook/test";
 import { useFormDefinition, getFormManager, useValidationRules } from "@ilbrando/simple-form";
-import { FormNumberField, FormTextField } from "@ilbrando/simple-form-material-ui";
+import { FormNumber, FormText } from "@ilbrando/simple-form-material-ui";
 import { Box, Button } from "@mui/material";
 import { useState } from "react";
 import { MakeNullable } from "../../../../../packages/utils/lib/utils";
@@ -41,8 +41,8 @@ const FormStory = ({ onSubmit }: { onSubmit?: (values: MakeNullable<FormFields>)
 
   return (
     <Box display="flex" flexDirection="column" gap={1}>
-      <FormTextField formManager={fm} fieldName="name" label="Name" />
-      <FormNumberField formManager={fm} fieldName="age" label="Age" />
+      <FormText formManager={fm} fieldName="name" label="Name" />
+      <FormNumber formManager={fm} fieldName="age" label="Age" />
       <Button disabled={isSubmitting} onClick={handleSubmit}>
         Submit
       </Button>

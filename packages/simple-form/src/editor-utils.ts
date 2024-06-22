@@ -1,6 +1,6 @@
 import { FormFieldState } from "./form-types";
 import { hasRequiredValidator } from "./form-validation";
-import { FormManager, getFormManager } from "./get-form-manager";
+import { FormManager } from "./get-form-manager";
 
 /** Returns an object to use in an editor component. */
 export const getEditor = function <TFields, TFieldValue>(formManager: FormManager<TFields>, fieldName: keyof TFields, isDisabled?: boolean) {

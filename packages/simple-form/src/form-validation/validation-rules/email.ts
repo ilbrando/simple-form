@@ -1,8 +1,8 @@
 import { hasValue } from "@ilbrando/utils";
 
-import { Validator } from "../validation-types";
-
 import { useLocalization } from "src/localization";
+
+import { Validator } from "../validation-types";
 
 const mailRegEx = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 

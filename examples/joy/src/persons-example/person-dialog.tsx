@@ -1,5 +1,5 @@
 import { getFormManager, useFormDefinition } from "@ilbrando/simple-form";
-import { FormNumberField, FormRangeSliderField, FormTextField } from "@ilbrando/simple-form-joy";
+import { FormNumber, FormRangeSlider, FormText } from "@ilbrando/simple-form-joy";
 import { ensureValue, hasValue, singleOrUndefined } from "@ilbrando/utils";
 import { Alert, DialogContent, DialogTitle, Modal, ModalDialog, Stack } from "@mui/joy";
 
@@ -111,14 +111,14 @@ export const PersonDialog = (props: PersonDialogProps) => {
             <Alert color="warning">Age = 99 is valid but will simulate an error from the backend.</Alert>
             <GroupBox>
               <Stack alignItems="flex-start">
-                {isAddingPerson && <FormTextField formManager={fm} fieldName="id" label="ID" />}
-                <FormTextField formManager={fm} fieldName="name" label="Name" fullWidth />
-                <FormNumberField formManager={fm} fieldName="age" label="Age" />
-                <FormTextField formManager={fm} fieldName="jobTitle" label="Job title" fullWidth />
+                {isAddingPerson && <FormText formManager={fm} fieldName="id" label="ID" />}
+                <FormText formManager={fm} fieldName="name" label="Name" fullWidth />
+                <FormNumber formManager={fm} fieldName="age" label="Age" />
+                <FormText formManager={fm} fieldName="jobTitle" label="Job title" fullWidth />
               </Stack>
             </GroupBox>
             <GroupBox title="Working hours">
-              <FormRangeSliderField formManager={fm} fieldName="workingHours" min={3} max={23} marks={[...Array(23 - 3 + 1).keys()].map(x => ({ value: x + 3, label: (x + 3).toString() }))} />
+              <FormRangeSlider formManager={fm} fieldName="workingHours" min={3} max={23} marks={[...Array(23 - 3 + 1).keys()].map(x => ({ value: x + 3, label: (x + 3).toString() }))} />
             </GroupBox>
           </Stack>
         </DialogContent>

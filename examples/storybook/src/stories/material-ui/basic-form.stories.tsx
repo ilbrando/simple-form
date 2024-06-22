@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import { useFormDefinition, getFormManager } from "@ilbrando/simple-form";
-import { FormNumberField, FormTextField } from "@ilbrando/simple-form-material-ui";
+import { FormNumber, FormText } from "@ilbrando/simple-form-material-ui";
 import { Box } from "@mui/material";
 
 type FormFields = {
@@ -20,8 +20,8 @@ const FormStory = () => {
 
   return (
     <Box display="flex" flexDirection="column" gap={1}>
-      <FormTextField formManager={fm} fieldName="name" label="Name" />
-      <FormNumberField formManager={fm} fieldName="age" label="Age" />
+      <FormText formManager={fm} fieldName="name" label="Name" />
+      <FormNumber formManager={fm} fieldName="age" label="Age" />
     </Box>
   );
 };
