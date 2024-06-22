@@ -1,8 +1,8 @@
 import { hasValue } from "@ilbrando/utils";
 
-import { Validator } from "../validation-types";
-
 import { useLocalization } from "src/localization";
+
+import { Validator } from "../validation-types";
 
 export const useNumberValidationRules = () => {
   const { texts } = useLocalization();

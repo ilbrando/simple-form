@@ -28,7 +28,7 @@ export const FormRadioGroup = function <TFields, TFormValue extends FormValue, T
 
   return (
     <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
-      <RadioGroup value={editor.value ?? ""} onChange={e => editor.setFieldValue((isValueString ? e.target.value : parseInt(e.target.value)) as TFormValue)}>
+      <RadioGroup value={editor.value ?? ""} onChange={e => editor.setFieldValue((isValueString ? e.target.value : parseInt(e.target.value)) as TFormValue)} {...rest}>
         {options.map(item => (
           <Radio key={item.value} value={item.value} label={item.label} disabled={editor.isDisabled} />
         ))}
