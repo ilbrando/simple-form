@@ -17,5 +17,6 @@
       "pattern": "./examples/*/"
     }
   ],
-  "git.branchProtection": ["main"]
+  "git.branchProtection": ["main"],
+  "cSpell.words": ["ilbrando"]
 }
