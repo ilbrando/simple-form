@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form-joy",
+      "comment": "Renamed form components",
+      "type": "major"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-joy"
+}
