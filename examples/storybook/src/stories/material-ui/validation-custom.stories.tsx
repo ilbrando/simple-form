@@ -26,7 +26,7 @@ const FormStory = () => {
   return (
     <Box display="flex" flexDirection="column" gap={1}>
       <FormTextField formManager={fm} fieldName="name" label="Name" />
-      <FormNumberField formManager={fm} fieldName="age" label="Age" placeholder="Only 42 is allowd" />
+      <FormNumberField formManager={fm} fieldName="age" label="Age" placeholder="Only 42 is allowed" />
     </Box>
   );
 };
