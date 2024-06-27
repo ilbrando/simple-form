@@ -38,12 +38,13 @@ const radioGroupOptions: RadioGroupOption<string>[] = optionValues;
 type FormStoryProps = {
   isDisabled: boolean;
   isRequired: boolean;
+  isReadOnly: boolean;
   size: "sm" | "md" | "lg";
   reserveSpaceForValidationMessage: boolean;
 };
 
 const FormStory = (props: FormStoryProps) => {
-  const { isDisabled, isRequired, size, reserveSpaceForValidationMessage } = props;
+  const { isDisabled, isRequired, isReadOnly, size, reserveSpaceForValidationMessage } = props;
 
   const { required, minCount, equal } = useValidationRules();
 
@@ -115,8 +116,8 @@ const FormStory = (props: FormStoryProps) => {
     <ThemeProvider theme={theme}>
       <Box display="grid" gridTemplateColumns="400px auto" gap={2}>
         <Box gridColumn="1" display="flex" flexDirection="column" gap={reserveSpaceForValidationMessage ? 0 : 1}>
-          <FormText formManager={fm} fieldName="textField" label="Text Field" disabled={isDisabled} size={size} />
-          <FormNumber formManager={fm} fieldName="numberField" label="Number Field" disabled={isDisabled} size={size} />
+          <FormText formManager={fm} fieldName="textField" label="Text Field" disabled={isDisabled} readOnly={isReadOnly} size={size} />
+          <FormNumber formManager={fm} fieldName="numberField" label="Number Field" disabled={isDisabled} readOnly={isReadOnly} size={size} />
           <FormAutocomplete formManager={fm} fieldName="autocompleteField" label="Autocomplete Field" options={autocompleteOptions} disabled={isDisabled} size={size} />
           <FormAutocompleteMultiple formManager={fm} fieldName="autocompleteMultipleField" label="Autocomplete Field (multiple)" options={autocompleteOptions} disabled={isDisabled} size={size} />
           <FormRadioGroup formManager={fm} fieldName="radiogroupField" label="Radiogroup Field" options={radioGroupOptions} disabled={isDisabled} size={size} />
@@ -146,6 +147,7 @@ const meta = {
   args: {
     isDisabled: false,
     isRequired: false,
+    isReadOnly: false,
     size: "md",
     reserveSpaceForValidationMessage: false
   }
