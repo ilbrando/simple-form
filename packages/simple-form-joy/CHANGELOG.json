@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.0.1",
+      "tag": "@ilbrando/simple-form-joy_v2.0.1",
+      "date": "Thu, 27 Jun 2024 11:29:23 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "FormText and FormNumber supports readOnly property also when the form field is disabled."
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@ilbrando/simple-form-joy_v2.0.0",
       "date": "Sat, 22 Jun 2024 14:04:48 GMT",
