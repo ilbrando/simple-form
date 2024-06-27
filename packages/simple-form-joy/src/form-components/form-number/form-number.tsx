@@ -14,11 +14,13 @@ type FormNumberProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>>
 const isValidValue = (value: string) => /^[-]?(\d+)$/.test(value);
 
 export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormNumberProps<TFields, TFieldName>) {
-  const { formManager, fieldName, disabled, label, size, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, disabled, readOnly, label, size, reserveSpaceForValidationMessage, ...rest } = props;
 
   const { texts } = useLocalization();
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);
+
+  const isDisabled = !(readOnly ?? false) && (disabled ?? false); // If readonly is true we don't disable the input because then the user can't copy the value
 
   const [textBoxValue, setTextBoxValue] = useState<string>(hasValue(editor.value) ? editor.value.toString() : "");
 
@@ -27,7 +29,7 @@ export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFiel
   }, [editor.value]);
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
+    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={isDisabled}>
       <Input
         value={textBoxValue}
         onChange={e => {
@@ -45,6 +47,7 @@ export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFiel
           setTextBoxValue(e.target.value);
           editor.setFieldValue(editor.value, texts.invalidValue);
         }}
+        readOnly={readOnly}
         {...rest}
       />
     </FormControlWrapper>

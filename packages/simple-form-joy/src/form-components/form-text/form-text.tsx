@@ -14,9 +14,11 @@ export type FormTextProps<TFields, TFieldName extends PropKeysOf<TFields, FormVa
   };
 
 export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormTextProps<TFields, TFieldName>) {
-  const { formManager, fieldName, textTransform, disabled, label, size, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, textTransform, disabled, readOnly, label, size, reserveSpaceForValidationMessage, ...rest } = props;
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);
+
+  const isDisabled = !(readOnly ?? false) && (disabled ?? false); // If readonly is true we don't disable the input because then the user can't copy the value
 
   const parseValue = (value: string) => {
     if (!hasValueAndNotEmptyString(value)) return null;
@@ -32,8 +34,8 @@ export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields
   };
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
-      <Input value={editor.value ?? ""} onChange={e => editor.setFieldValue(parseValue(e.target.value))} {...rest} />
+    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={isDisabled}>
+      <Input value={editor.value ?? ""} onChange={e => editor.setFieldValue(parseValue(e.target.value))} readOnly={readOnly} {...rest} />
     </FormControlWrapper>
   );
 };
