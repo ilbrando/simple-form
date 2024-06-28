@@ -20,7 +20,7 @@ export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFiel
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);
 
-  const isDisabled = !(readOnly ?? false) && (disabled ?? false); // If readonly is true we don't disable the input because then the user can't copy the value
+  const isDisabled = !(readOnly ?? false) && editor.isDisabled; // If readonly is true we don't disable the input because then the user can't copy the value
 
   const [textBoxValue, setTextBoxValue] = useState<string>(hasValue(editor.value) ? editor.value.toString() : "");
 
