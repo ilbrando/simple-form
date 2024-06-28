@@ -67,7 +67,7 @@ export const getFormManager = <TFields>(formDefinition: ReturnType<typeof useFor
      * form manager can be passed on to field controls and they have access to the form state.
      */
     formState,
-    /** This is the `isSubitting` parameter you called this hook with. It is included in the result so the
+    /** This is the `isSubmitting` parameter you called this hook with. It is included in the result so the
      * form manager can be passed on to field controls and they have access to the submitting state.
      */
     isSubmitting,

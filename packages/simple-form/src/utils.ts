@@ -74,7 +74,7 @@ export const getFieldValues = <TFields>(formState: FormState<TFields>, fieldName
   return values;
 };
 
-export const getModifiedFieldValues = <T extends Record<string, unknown>>(initialFieldValues: T, fieldValues: T) => {
+export const getModifiedFieldValues = <TFields, T extends MakeNullable<TFields>>(initialFieldValues: T, fieldValues: T) => {
   const initialFieldValueEntries = new Map(Object.entries(initialFieldValues));
   const fieldValueEntries = Object.entries(fieldValues);
   return Object.fromEntries(
@@ -82,5 +82,5 @@ export const getModifiedFieldValues = <T extends Record<string, unknown>>(initia
       const initialValue = initialFieldValueEntries.get(key);
       return !isEqual(value, initialValue);
     })
-  );
+  ) as Partial<T>;
 };
