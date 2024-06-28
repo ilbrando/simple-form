@@ -52,11 +52,13 @@ const FormStory = (props: FormStoryProps) => {
     fields: {
       textField: {
         validators: isRequired ? [required()] : [],
-        initialIsDisabled: isDisabled
+        initialIsDisabled: isDisabled,
+        initialValue: "abc"
       },
       numberField: {
         validators: isRequired ? [required()] : [],
-        initialIsDisabled: isDisabled
+        initialIsDisabled: isDisabled,
+        initialValue: 123
       },
       autocompleteField: {
         validators: isRequired ? [required()] : [],

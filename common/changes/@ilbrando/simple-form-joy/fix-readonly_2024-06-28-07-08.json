@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form-joy",
+      "comment": "Fix readonly for FormText and FormNumber",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-joy"
+}

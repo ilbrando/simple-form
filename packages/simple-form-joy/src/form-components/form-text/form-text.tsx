@@ -18,7 +18,7 @@ export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);
 
-  const isDisabled = !(readOnly ?? false) && (disabled ?? false); // If readonly is true we don't disable the input because then the user can't copy the value
+  const isDisabled = !(readOnly ?? false) && editor.isDisabled; // If readonly is true we don't disable the input because then the user can't copy the value
 
   const parseValue = (value: string) => {
     if (!hasValueAndNotEmptyString(value)) return null;
