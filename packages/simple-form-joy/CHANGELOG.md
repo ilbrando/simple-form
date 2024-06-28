@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form-joy
 
-This log was last generated on Thu, 27 Jun 2024 11:29:23 GMT and should not be manually modified.
+This log was last generated on Fri, 28 Jun 2024 07:23:35 GMT and should not be manually modified.
+
+## 2.0.2
+Fri, 28 Jun 2024 07:23:35 GMT
+
+### Patches
+
+- Fix readonly for FormText and FormNumber
 
 ## 2.0.1
 Thu, 27 Jun 2024 11:29:23 GMT

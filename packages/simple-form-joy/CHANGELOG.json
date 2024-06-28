@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.0.2",
+      "tag": "@ilbrando/simple-form-joy_v2.0.2",
+      "date": "Fri, 28 Jun 2024 07:23:35 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Fix readonly for FormText and FormNumber"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.1",
       "tag": "@ilbrando/simple-form-joy_v2.0.1",
       "date": "Thu, 27 Jun 2024 11:29:23 GMT",
