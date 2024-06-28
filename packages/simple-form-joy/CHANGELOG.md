@@ -1,6 +1,11 @@
 # Change Log - @ilbrando/simple-form-joy
 
-This log was last generated on Fri, 28 Jun 2024 07:23:35 GMT and should not be manually modified.
+This log was last generated on Fri, 28 Jun 2024 07:51:16 GMT and should not be manually modified.
+
+## 2.0.3
+Fri, 28 Jun 2024 07:51:16 GMT
+
+_Version update only_
 
 ## 2.0.2
 Fri, 28 Jun 2024 07:23:35 GMT
