@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form-joy
 
-This log was last generated on Fri, 28 Jun 2024 07:51:16 GMT and should not be manually modified.
+This log was last generated on Mon, 22 Jul 2024 08:44:55 GMT and should not be manually modified.
+
+## 2.0.4
+Mon, 22 Jul 2024 08:44:55 GMT
+
+### Patches
+
+- Fix reserve spacing for error message
 
 ## 2.0.3
 Fri, 28 Jun 2024 07:51:16 GMT
