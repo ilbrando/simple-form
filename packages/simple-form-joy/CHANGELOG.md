@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form-joy
 
-This log was last generated on Mon, 22 Jul 2024 08:44:55 GMT and should not be manually modified.
+This log was last generated on Mon, 22 Jul 2024 09:15:21 GMT and should not be manually modified.
+
+## 2.1.0
+Mon, 22 Jul 2024 09:15:21 GMT
+
+### Minor changes
+
+- New sxFormControl prop to access sx prop on FormControl wrapper
 
 ## 2.0.4
 Mon, 22 Jul 2024 08:44:55 GMT

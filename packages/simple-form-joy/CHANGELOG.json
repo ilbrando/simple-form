@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.1.0",
+      "tag": "@ilbrando/simple-form-joy_v2.1.0",
+      "date": "Mon, 22 Jul 2024 09:15:21 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "New sxFormControl prop to access sx prop on FormControl wrapper"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.4",
       "tag": "@ilbrando/simple-form-joy_v2.0.4",
       "date": "Mon, 22 Jul 2024 08:44:55 GMT",
