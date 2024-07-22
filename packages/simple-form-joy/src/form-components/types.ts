@@ -11,6 +11,8 @@ export type FormFieldBaseSharedProps = Pick<FormControlProps, "size"> & {
    * prop if you want to override the value on each instance.
    */
   reserveSpaceForValidationMessage?: boolean;
+  /** The sx prop for the wrapping `FormControl` */
+  sxFormControl?: FormControlProps["sx"];
 };
 
 export type FormFieldBaseProps<TFields, TFormValue, TFieldName extends PropKeysOf<TFields, TFormValue>> = FormFieldBaseSharedProps & {

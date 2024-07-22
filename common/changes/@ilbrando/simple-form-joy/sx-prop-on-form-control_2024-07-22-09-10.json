@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form-joy",
+      "comment": "New sxFormControl prop to access sx prop on FormControl wrapper",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-joy"
+}

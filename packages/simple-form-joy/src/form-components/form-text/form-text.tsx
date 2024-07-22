@@ -14,7 +14,7 @@ export type FormTextProps<TFields, TFieldName extends PropKeysOf<TFields, FormVa
   };
 
 export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormTextProps<TFields, TFieldName>) {
-  const { formManager, fieldName, textTransform, disabled, readOnly, label, size, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, textTransform, disabled, readOnly, label, size, reserveSpaceForValidationMessage, sxFormControl, ...rest } = props;
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);
 
@@ -34,7 +34,15 @@ export const FormText = function <TFields, TFieldName extends PropKeysOf<TFields
   };
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={isDisabled}>
+    <FormControlWrapper
+      label={label}
+      size={size}
+      errorMessage={editor.errorMessage}
+      reserveSpaceForValidationMessage={reserveSpaceForValidationMessage}
+      isRequired={editor.isRequired}
+      isDisabled={isDisabled}
+      sxFormControl={sxFormControl}
+    >
       <Input value={editor.value ?? ""} onChange={e => editor.setFieldValue(parseValue(e.target.value))} readOnly={readOnly} {...rest} />
     </FormControlWrapper>
   );
