@@ -17,11 +17,13 @@ export const FormControlWrapper = (props: FormControlWrapperProps) => {
 
   const { effectiveReserveSpaceForValidationMessage } = useJoyFormUtils(reserveSpaceForValidationMessage);
 
+  const showErrorMessage = hasValue(errorMessage) || effectiveReserveSpaceForValidationMessage;
+
   return (
     <FormControl size={size} error={hasValue(errorMessage)} required={isRequired} disabled={isDisabled}>
       {hasValue(label) && <FormLabel>{label}</FormLabel>}
       {children}
-      <FormHelperText>{errorMessage ?? (effectiveReserveSpaceForValidationMessage ? <>{"\u00A0"}</> : null)}</FormHelperText>
+      {showErrorMessage && <FormHelperText>{errorMessage ?? (effectiveReserveSpaceForValidationMessage ? <>{"\u00A0"}</> : null)}</FormHelperText>}
     </FormControl>
   );
 };

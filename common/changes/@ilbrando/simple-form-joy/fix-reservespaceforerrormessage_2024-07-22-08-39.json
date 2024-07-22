@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form-joy",
+      "comment": "Fix reserve spacing for error message",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-joy"
+}
