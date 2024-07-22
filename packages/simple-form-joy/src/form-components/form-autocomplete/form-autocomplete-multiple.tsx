@@ -20,14 +20,22 @@ export type FormAutocompleteMultipleProps<TFields, TFormValue extends FormValue,
   };
 
 export const FormAutocompleteMultiple = function <TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue[]>>(props: FormAutocompleteMultipleProps<TFields, TFormValue, TFieldName>) {
-  const { formManager, fieldName, disabled, options, label, size, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, disabled, options, label, size, reserveSpaceForValidationMessage, sxFormControl, ...rest } = props;
 
   const editor = getEditor<TFields, TFormValue[]>(formManager, fieldName, disabled);
 
   const optionValues = useMemo(() => options.map(x => x.value), [options]);
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
+    <FormControlWrapper
+      label={label}
+      size={size}
+      errorMessage={editor.errorMessage}
+      reserveSpaceForValidationMessage={reserveSpaceForValidationMessage}
+      isRequired={editor.isRequired}
+      isDisabled={editor.isDisabled}
+      sxFormControl={sxFormControl}
+    >
       <Autocomplete
         multiple={true}
         value={editor.value ?? []}

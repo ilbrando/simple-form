@@ -14,7 +14,7 @@ type FormNumberProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>>
 const isValidValue = (value: string) => /^[-]?(\d+)$/.test(value);
 
 export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormNumberProps<TFields, TFieldName>) {
-  const { formManager, fieldName, disabled, readOnly, label, size, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, disabled, readOnly, label, size, reserveSpaceForValidationMessage, sxFormControl, ...rest } = props;
 
   const { texts } = useLocalization();
 
@@ -29,7 +29,15 @@ export const FormNumber = function <TFields, TFieldName extends PropKeysOf<TFiel
   }, [editor.value]);
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={isDisabled}>
+    <FormControlWrapper
+      label={label}
+      size={size}
+      errorMessage={editor.errorMessage}
+      reserveSpaceForValidationMessage={reserveSpaceForValidationMessage}
+      isRequired={editor.isRequired}
+      isDisabled={isDisabled}
+      sxFormControl={sxFormControl}
+    >
       <Input
         value={textBoxValue}
         onChange={e => {

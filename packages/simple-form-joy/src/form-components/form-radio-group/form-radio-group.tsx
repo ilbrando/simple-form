@@ -20,14 +20,22 @@ export type FormRadioGroupProps<TFields, TFormValue extends FormValue, TFieldNam
   };
 
 export const FormRadioGroup = function <TFields, TFormValue extends FormValue, TFieldName extends PropKeysOf<TFields, TFormValue>>(props: FormRadioGroupProps<TFields, TFormValue, TFieldName>) {
-  const { formManager, fieldName, disabled = false, label, size, options, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, disabled = false, label, size, options, reserveSpaceForValidationMessage, sxFormControl, ...rest } = props;
 
   const editor = getEditor<TFields, TFormValue>(formManager, fieldName, disabled);
 
   const isValueString = options.length > 0 && typeof options[0].value === "string";
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
+    <FormControlWrapper
+      label={label}
+      size={size}
+      errorMessage={editor.errorMessage}
+      reserveSpaceForValidationMessage={reserveSpaceForValidationMessage}
+      isRequired={editor.isRequired}
+      isDisabled={editor.isDisabled}
+      sxFormControl={sxFormControl}
+    >
       <RadioGroup value={editor.value ?? ""} onChange={e => editor.setFieldValue((isValueString ? e.target.value : parseInt(e.target.value)) as TFormValue)} {...rest}>
         {options.map(item => (
           <Radio key={item.value} value={item.value} label={item.label} disabled={editor.isDisabled} />

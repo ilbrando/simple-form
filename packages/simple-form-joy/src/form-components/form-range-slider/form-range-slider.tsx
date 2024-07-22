@@ -14,7 +14,7 @@ export type FormRangeSliderValue = {
 type FormRangeSliderProps<TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>> = OmitSafe<SliderProps, "value" | "onChange"> & FormFieldBaseProps<TFields, FormRangeSliderValue, TFieldName>;
 
 export const FormRangeSlider = function <TFields, TFieldName extends PropKeysOf<TFields, FormRangeSliderValue>>(props: FormRangeSliderProps<TFields, TFieldName>) {
-  const { formManager, fieldName, label, size, disabled, reserveSpaceForValidationMessage, ...rest } = props;
+  const { formManager, fieldName, label, size, disabled, reserveSpaceForValidationMessage, sxFormControl, ...rest } = props;
 
   const editor = getEditor<TFields, FormRangeSliderValue>(formManager, fieldName, disabled);
 
@@ -29,7 +29,15 @@ export const FormRangeSlider = function <TFields, TFieldName extends PropKeysOf<
   };
 
   return (
-    <FormControlWrapper label={label} size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
+    <FormControlWrapper
+      label={label}
+      size={size}
+      errorMessage={editor.errorMessage}
+      reserveSpaceForValidationMessage={reserveSpaceForValidationMessage}
+      isRequired={editor.isRequired}
+      isDisabled={editor.isDisabled}
+      sxFormControl={sxFormControl}
+    >
       <Box px={1}>
         <Slider value={hasValue(editor.value) ? [editor.value.from, editor.value.to] : [0, 0]} onChange={handleOnChange} disabled={editor.isDisabled} {...rest} />
       </Box>

@@ -15,7 +15,7 @@ export type FormSwitchProps<TFields, TFieldName extends PropKeysOf<TFields, Form
   };
 
 export const FormSwitch = function <TFields, TFieldName extends PropKeysOf<TFields, FormValue>>(props: FormSwitchProps<TFields, TFieldName>) {
-  const { formManager, fieldName, disabled, label, labelPlacement = "end", size, reserveSpaceForValidationMessage, sx, ...rest } = props;
+  const { formManager, fieldName, disabled, label, labelPlacement = "end", size, reserveSpaceForValidationMessage, sxFormControl, sx, ...rest } = props;
 
   const editor = getEditor<TFields, FormValue>(formManager, fieldName, disabled);
 
@@ -24,7 +24,14 @@ export const FormSwitch = function <TFields, TFieldName extends PropKeysOf<TFiel
   );
 
   return (
-    <FormControlWrapper size={size} errorMessage={editor.errorMessage} reserveSpaceForValidationMessage={reserveSpaceForValidationMessage} isRequired={editor.isRequired} isDisabled={editor.isDisabled}>
+    <FormControlWrapper
+      size={size}
+      errorMessage={editor.errorMessage}
+      reserveSpaceForValidationMessage={reserveSpaceForValidationMessage}
+      isRequired={editor.isRequired}
+      isDisabled={editor.isDisabled}
+      sxFormControl={sxFormControl}
+    >
       <Typography component="label" startDecorator={labelPlacement === "end" && Editor} endDecorator={labelPlacement === "start" && Editor}>
         {label}
       </Typography>
