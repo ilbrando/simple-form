@@ -3,7 +3,8 @@ import { FormManager } from "@ilbrando/simple-form";
 import { PropKeysOf } from "@ilbrando/utils";
 import { FormControlProps } from "@mui/joy";
 
-export type FormFieldBaseSharedProps = Pick<FormControlProps, "size"> & {
+export type FormFieldBaseSharedProps = {
+  size?: FormControlProps["size"];
   label?: ReactNode;
   /** Set this to true if you want to reserve space for validation messages
    * and not have the form fields change position when messages are shown/hidden.
