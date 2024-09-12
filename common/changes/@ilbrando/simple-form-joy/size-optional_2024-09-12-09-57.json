@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form-joy",
+      "comment": "Prop size is now optional",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-joy"
+}
