@@ -1,5 +1,6 @@
 import { defineConfig } from "vite";
 import path from "path";
+import pkg from "./package.json";
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -10,7 +11,10 @@ export default defineConfig({
       name: "utils",
       fileName: "index"
     },
-    outDir: "lib"
+    outDir: "lib",
+    rollupOptions: {
+      external: Object.keys(pkg.peerDependencies || {})
+    }
   },
   resolve: {
     alias: {

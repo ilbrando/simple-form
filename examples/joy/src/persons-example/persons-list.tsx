@@ -15,11 +15,13 @@ export const PersonsList = () => {
       </Button>
       <Table>
         <thead>
-          <th>ID</th>
-          <th>Name</th>
-          <th>Age</th>
-          <th>Job title</th>
-          <th></th>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Job title</th>
+            <th></th>
+          </tr>
         </thead>
         <tbody>
           {state.persons.map(person => (

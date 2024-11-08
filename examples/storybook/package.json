@@ -12,10 +12,6 @@
     "eslint": "echo no eslint yet."
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
     "@chromatic-com/storybook": "^1.5.0",
     "@ilbrando/utils": "workspace:*",
     "@ilbrando/simple-form": "workspace:*",
@@ -29,6 +25,16 @@
     "@storybook/react": "^8.1.5",
     "@storybook/react-vite": "^8.1.5",
     "@storybook/test": "^8.1.5",
+    "react": "^18",
+    "react-dom": "^18",
+    "storybook": "^8.1.5",
+    "@mui/material": "^5",
+    "@mui/x-date-pickers": "^7",
+    "@mui/joy": "^5.0.0-beta.36",
+    "@emotion/react": "^11",
+    "@emotion/styled": "^11"
+  },
+  "devDependencies": {
     "@types/react": "^18",
     "@types/react-dom": "^18",
     "@typescript-eslint/parser": "~7.9.0",
@@ -39,12 +45,6 @@
     "vite": "~5.2.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
-    "eslint-plugin-storybook": "^0.8.0",
-    "storybook": "^8.1.5",
-    "@mui/material": "^5",
-    "@mui/x-date-pickers": "^7",
-    "@mui/joy": "^5.0.0-beta.36",
-    "@emotion/react": "^11",
-    "@emotion/styled": "^11"
+    "eslint-plugin-storybook": "^0.8.0"
   }
 }
