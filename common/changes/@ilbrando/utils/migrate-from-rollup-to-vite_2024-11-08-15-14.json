@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/utils",
+      "comment": "Migrated from rollup to vite",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ilbrando/utils"
+}
