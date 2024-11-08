@@ -189,9 +189,6 @@ importers:
       npm-run-all:
         specifier: ~4.1.5
         version: 4.1.5
-      tslib:
-        specifier: ~2.6.2
-        version: 2.6.3
       typescript:
         specifier: ~5.4.5
         version: 5.4.5
@@ -241,9 +238,6 @@ importers:
       npm-run-all:
         specifier: ~4.1.5
         version: 4.1.5
-      tslib:
-        specifier: ~2.6.2
-        version: 2.6.3
       typescript:
         specifier: ~5.4.5
         version: 5.4.5
@@ -296,9 +290,6 @@ importers:
       npm-run-all:
         specifier: ~4.1.5
         version: 4.1.5
-      tslib:
-        specifier: ~2.6.2
-        version: 2.6.3
       typescript:
         specifier: ~5.4.5
         version: 5.4.5
@@ -320,9 +311,6 @@ importers:
       npm-run-all:
         specifier: ~4.1.5
         version: 4.1.5
-      tslib:
-        specifier: ~2.6.2
-        version: 2.6.3
       typescript:
         specifier: ~5.4.5
         version: 5.4.5
