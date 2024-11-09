@@ -20,3 +20,7 @@ jobs:
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
+      - name: Rush test
+        run: node common/scripts/install-run-rush.js test
+      - name: Rush eslint
+        run: node common/scripts/install-run-rush.js eslint

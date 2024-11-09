@@ -177,9 +177,17 @@
     // }
     {
       "commandKind": "bulk",
+      "name": "test",
+      "summary": "Run unit tests.",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
       "name": "eslint",
       "summary": "Lints all projects",
-      "enableParallelism": false
+      "enableParallelism": false,
+      "ignoreMissingScript": true
     }
   ],
 

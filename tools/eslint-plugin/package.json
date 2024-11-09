@@ -19,8 +19,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup src/index.ts --format esm --dts",
-    "eslint": "echo no linting in this project for now"
+    "build": "tsup src/index.ts --format esm --dts"
   },
   "dependencies": {
     "@types/eslint__js": "~8.42.3",
