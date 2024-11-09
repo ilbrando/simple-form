@@ -26,14 +26,13 @@ export const hasValueAndNotEmptyString = <T>(value: T | undefined | null): value
 };
 
 /** You can use this when the Typescript compiler can't determine that a value is not
- * `null` or ùndefined`. If the values i `null` or `undefined` an `Error` is thrown.
+ * `null` or `undefined`. If the values i `null` or `undefined` an `Error` is thrown.
  * You can provide the message for the error to help identifying where in the code the
  * error happened.
  *
  * @example
- * const someFunction = (value: number) => console.log(number);
- * const someNumber: number | undefined = 42;
- * if (hasValue(someNumber)) someFunction(someNumber);
+ * const someValue: number | undefined = 42;
+ * const value = ensure(someValue); // => number (or throws)
  */
 export const ensureValue = <T>(value: Maybe<T>, message?: string): T => {
   if (value === undefined) throw Error(`ensureValue (value is undefined): ${message ?? "did not expect this"}.`);

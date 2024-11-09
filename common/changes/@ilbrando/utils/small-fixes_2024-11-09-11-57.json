@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "Small changes",
+      "type": "patch",
+      "packageName": "@ilbrando/utils"
+    }
+  ],
+  "packageName": "@ilbrando/utils",
+  "email": "michael@ilbrando.dk"
+}

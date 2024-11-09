@@ -82,7 +82,7 @@ export const PersonDialog = (props: PersonDialogProps) => {
 
   const handleSubmit = async () => {
     if (fm.validateForm()) {
-      /**  the props on `fm.values` can always be null, but when validation is performed, we know which props are guarantied to have a value - ensureValue will throw if this assumption don't hold. */
+      /**  the props on `fm.values` can always be null, but when validation is performed, we know which props are guarantied to have a value - ensureValue will throw if this assumption doesn't hold. */
       const updatedPerson: Person = {
         id: id ?? ensureValue(fm.values.id),
         name: ensureValue(fm.values.name),
