@@ -2,6 +2,31 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.1.1",
+      "tag": "@ilbrando/simple-form-joy_v2.1.1",
+      "date": "Sat, 09 Nov 2024 12:03:52 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Migrated from rollup to vite"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Small changes"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `1.0.2`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/simple-form\" to `1.0.3`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.0",
       "tag": "@ilbrando/simple-form-joy_v2.1.0",
       "date": "Mon, 22 Jul 2024 09:15:21 GMT",
