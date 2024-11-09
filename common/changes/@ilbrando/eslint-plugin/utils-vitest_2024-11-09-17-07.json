@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/eslint-plugin",
+      "comment": "Remove eslint script",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ilbrando/eslint-plugin"
+}
