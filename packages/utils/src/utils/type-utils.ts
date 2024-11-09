@@ -87,7 +87,7 @@ export type InferArrayItem<T> = T extends Array<infer I> ? I : never;
  *
  * @example
  * type S = "a" | "b";
- * const s = "a"; // intellisense will show "a" and "b".
- * const x = "y"; // but all other strings are also valid
+ * const s: Arbitrary<S> = "a"; // intellisense will show "a" and "b".
+ * const x: Arbitrary<S> = "y"; // but all other strings are also valid
  */
 export type Arbitrary<T extends string> = T | Omit<string, T>;

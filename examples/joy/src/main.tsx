@@ -1,4 +1,4 @@
-import React from "react";
+import { StrictMode } from "react";
 import ReactDOM from "react-dom/client";
 import { moduleAugmentation as _ } from "@ilbrando/simple-form-joy";
 import { Box, CssBaseline, extendTheme, ThemeProvider } from "@mui/joy";
@@ -12,12 +12,12 @@ const theme = extendTheme({
 });
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
+  <StrictMode>
     <CssBaseline />
     <ThemeProvider theme={theme}>
       <Box height="100%" maxWidth="1024px" p={4}>
         <Persons />
       </Box>
     </ThemeProvider>
-  </React.StrictMode>
+  </StrictMode>
 );
