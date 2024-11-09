@@ -33,7 +33,8 @@
     "vite": "vite",
     "type-check": "tsc --noEmit --watch",
     "build": "vite build && tsc -p tsconfig-declarations.json",
-    "eslint": "eslint"
+    "test": "vitest run",
+    "eslint": "eslint --max-warnings=0"
   },
   "devDependencies": {
     "@types/deep-equal": "~1.0.4",
@@ -41,7 +42,8 @@
     "eslint": "~9.4.0",
     "npm-run-all": "~4.1.5",
     "typescript": "~5.4.5",
-    "vite": "~5.2.0"
+    "vite": "~5.2.0",
+    "vitest": "~2.1.4"
   },
   "peerDependencies": {}
 }

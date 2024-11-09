@@ -33,7 +33,7 @@
     "vite": "vite",
     "type-check": "tsc --noEmit --watch",
     "build": "vite build && tsc -p tsconfig-declarations.json",
-    "eslint": "eslint"
+    "eslint": "eslint --max-warnings=0"
   },
   "devDependencies": {
     "@ilbrando/eslint-plugin": "workspace:*",

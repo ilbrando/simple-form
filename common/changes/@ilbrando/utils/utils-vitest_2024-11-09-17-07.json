@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/utils",
+      "comment": "Eslint script and unit tests",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/utils"
+}

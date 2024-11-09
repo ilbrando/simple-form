@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form",
+      "comment": "Eslint script",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form"
+}

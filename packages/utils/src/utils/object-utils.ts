@@ -21,8 +21,10 @@ export const isObject = (value: unknown): value is object => {
 };
 
 export const hasValueAndNotEmptyString = <T>(value: T | undefined | null): value is T => {
-  if (typeof value === "string" && value === "") return false;
-  return hasValue(value);
+  if (!hasValue(value)) return false;
+  if (typeof value !== "string") return false;
+  if (value === "") return false;
+  return true;
 };
 
 /** You can use this when the Typescript compiler can't determine that a value is not
