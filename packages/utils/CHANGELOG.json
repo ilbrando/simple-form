@@ -2,6 +2,18 @@
   "name": "@ilbrando/utils",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@ilbrando/utils_v1.0.3",
+      "date": "Sat, 09 Nov 2024 17:13:53 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Eslint script and unit tests"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@ilbrando/utils_v1.0.2",
       "date": "Sat, 09 Nov 2024 12:03:52 GMT",

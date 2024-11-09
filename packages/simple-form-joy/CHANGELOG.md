@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form-joy
 
-This log was last generated on Sat, 09 Nov 2024 12:03:52 GMT and should not be manually modified.
+This log was last generated on Sat, 09 Nov 2024 17:13:53 GMT and should not be manually modified.
+
+## 2.1.2
+Sat, 09 Nov 2024 17:13:53 GMT
+
+### Patches
+
+- Eslint script
 
 ## 2.1.1
 Sat, 09 Nov 2024 12:03:52 GMT
