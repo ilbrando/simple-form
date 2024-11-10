@@ -80,6 +80,6 @@ common/autoinstallers/*/.npmrc
 *storybook.log
 storybook-static
 /test-results/
-/playwright-report/
+**/playwright-report/
+**/playwright/.cache/
 /blob-report/
-/playwright/.cache/
