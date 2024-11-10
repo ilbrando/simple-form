@@ -79,7 +79,7 @@ common/autoinstallers/*/.npmrc
 **/.rollup.cache/
 *storybook.log
 storybook-static
-/test-results/
-**/playwright-report/
-**/playwright/.cache/
+test-results/
+playwright-report/
+playwright/.cache/
 /blob-report/
