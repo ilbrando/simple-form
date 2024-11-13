@@ -33,10 +33,12 @@
     "vite": "vite",
     "type-check": "tsc --noEmit --watch",
     "build": "vite build && tsc -p tsconfig-declarations.json",
-    "eslint": "eslint --max-warnings=0"
+    "eslint": "eslint --max-warnings=0",
+    "test": "playwright test -c playwright-ct.config.ts"
   },
   "devDependencies": {
     "@ilbrando/eslint-plugin": "workspace:*",
+    "@playwright/experimental-ct-react": "~1.48.2",
     "@playwright/test": "~1.48.2",
     "@types/node": "~20.12.12",
     "@types/react": "^18",
