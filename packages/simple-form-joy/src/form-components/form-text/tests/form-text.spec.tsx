@@ -10,8 +10,10 @@ test("updates form state when receiving input", async ({ mount }) => {
   // Act
   const component = await mount(
     <TestComponent
-      valueChange={v => {
-        nameValue = v;
+      onChange={{
+        name: v => {
+          nameValue = v;
+        }
       }}
     />
   );

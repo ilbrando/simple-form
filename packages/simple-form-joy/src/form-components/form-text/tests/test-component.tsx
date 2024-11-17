@@ -2,13 +2,14 @@ import { FormText } from "../form-text";
 import { useTestForm } from "../../../test-components/form-utils";
 import { TestWrapper } from "../../../test-components/test-wrapper";
 
-type TestComponentProps = {
-  valueChange: ReturnType<typeof useTestForm>["fm"]["onChange"]["name"];
-};
+type TestComponentProps = Pick<ReturnType<typeof useTestForm>["fm"], "onChange">;
+
 export const TestComponent = (props: TestComponentProps) => {
-  const { valueChange } = props;
+  const { onChange } = props;
+
   const { fm } = useTestForm(false);
-  fm.onChange.name = valueChange;
+
+  Object.assign(fm.onChange, onChange);
 
   return (
     <TestWrapper>
