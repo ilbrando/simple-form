@@ -1,8 +1,7 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 
-import { TestWrapper } from "src/test-components/test-wrapper";
-
 import { FormControlWrapper } from "../form-control-wrapper";
+import { TestWrapper } from "../../../test-components/test-wrapper";
 
 test.describe("form-control-wrapper", () => {
   test("renders content", async ({ mount }) => {

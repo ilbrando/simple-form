@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
-import { moduleAugmentation as _ } from "@ilbrando/simple-form-joy";
 import { Box, CssBaseline, extendTheme, ThemeProvider } from "@mui/joy";
+
+import { moduleAugmentation as _ } from "../simple-form-module-argumentation";
 
 const theme = extendTheme({
   simpleForm: {
