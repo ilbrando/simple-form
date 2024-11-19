@@ -1,11 +1,13 @@
-import { FormText } from "../form-text";
-import { useTestForm } from "../../../test-components/form-utils";
+import { MakeOptional } from "@ilbrando/utils";
+
+import { FormText, FormTextProps } from "../form-text";
+import { TestForm, useTestForm } from "../../../test-components/form-utils";
 import { TestWrapper } from "../../../test-components/test-wrapper";
 
-type TestComponentProps = Pick<ReturnType<typeof useTestForm>["fm"], "onChange">;
+type TestComponentProps = MakeOptional<Pick<ReturnType<typeof useTestForm>["fm"], "onChange">> & Pick<FormTextProps<TestForm, "name">, "textTransform" | "label">;
 
 export const TestComponent = (props: TestComponentProps) => {
-  const { onChange } = props;
+  const { onChange, ...rest } = props;
 
   const { fm } = useTestForm(false);
 
@@ -13,7 +15,7 @@ export const TestComponent = (props: TestComponentProps) => {
 
   return (
     <TestWrapper>
-      <FormText formManager={fm} fieldName="name" />
+      <FormText formManager={fm} fieldName="name" {...rest} />
     </TestWrapper>
   );
 };

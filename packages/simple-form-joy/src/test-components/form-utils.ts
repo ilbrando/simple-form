@@ -1,6 +1,6 @@
 import { getFormManager, useFormDefinition } from "@ilbrando/simple-form";
 
-type TestForm = {
+export type TestForm = {
   name: string;
   age: number;
   jobTitle: string;
