@@ -1,15 +1,16 @@
-import { MakeOptional } from "@ilbrando/utils";
-
 import { FormText, FormTextProps } from "../form-text";
-import { TestForm, useTestForm } from "../../../test-components/form-utils";
+import { TestForm, useTestForm, UseTestFormOptions } from "../../../test-components/form-utils";
 import { TestWrapper } from "../../../test-components/test-wrapper";
 
-type TestComponentProps = MakeOptional<Pick<ReturnType<typeof useTestForm>["fm"], "onChange">> & Pick<FormTextProps<TestForm, "name">, "textTransform" | "label">;
+type TestComponentProps = Partial<Pick<ReturnType<typeof useTestForm>["fm"], "onChange">> &
+  Pick<FormTextProps<TestForm, "name">, "textTransform" | "label"> & {
+    formOptions?: Partial<UseTestFormOptions>;
+  };
 
 export const TestComponent = (props: TestComponentProps) => {
-  const { onChange, ...rest } = props;
+  const { onChange, formOptions, ...rest } = props;
 
-  const { fm } = useTestForm(false);
+  const { fm } = useTestForm(formOptions);
 
   Object.assign(fm.onChange, onChange);
 

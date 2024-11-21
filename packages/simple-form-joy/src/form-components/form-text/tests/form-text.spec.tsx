@@ -85,3 +85,14 @@ test("renders label", async ({ mount }) => {
   // Assert
   await expect(component).toContainText(expected);
 });
+
+test("renders error message", async ({ mount }) => {
+  // Arrange
+  const expected = "Error message";
+
+  // Act
+  const component = await mount(<TestComponent label={expected} formOptions={{ fields: { name: { validators: [() => expected] }, age: {}, jobTitle: {} } }} />);
+
+  // Assert
+  await expect(component).toContainText(expected);
+});
