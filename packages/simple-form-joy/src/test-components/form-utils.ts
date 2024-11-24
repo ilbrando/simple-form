@@ -1,30 +1,21 @@
 import { getFormManager, useFormDefinition } from "@ilbrando/simple-form";
 
-export type TestForm = {
+export type TestFormFields = {
   name: string;
   age: number;
-  jobTitle: string;
 };
 
-export type UseTestFormOptions = Parameters<typeof useFormDefinition<TestForm>>[0] & {
-  isSubmitting: boolean;
-};
+export type UseTestFormOptions = Parameters<typeof useFormDefinition<TestFormFields>>[0];
 
-export const useTestForm = (options?: Partial<UseTestFormOptions>) => {
-  const effectiveOptions: UseTestFormOptions = {
+export const useTestForm = (options?: UseTestFormOptions, isSubmitting: boolean = false) => {
+  const effectiveOptions: UseTestFormOptions = options ?? {
     fields: {
       name: {},
-      age: {},
-      jobTitle: {}
-    },
-    isSubmitting: false
+      age: {}
+    }
   };
 
-  Object.assign(effectiveOptions, options);
-
-  const { isSubmitting, ...rest } = effectiveOptions;
-
-  const fd = useFormDefinition<TestForm>(rest);
+  const fd = useFormDefinition<TestFormFields>(effectiveOptions);
 
   const fm = getFormManager(fd, isSubmitting);
 
