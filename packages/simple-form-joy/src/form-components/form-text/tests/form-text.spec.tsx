@@ -11,7 +11,7 @@ test("updates form state when receiving input", async ({ mount }) => {
   const component = await mount(
     <FormTextTestComponent
       onChange={{
-        name: v => {
+        stringField: v => {
           nameValue = v;
         }
       }}
@@ -35,7 +35,7 @@ test("performs text transform lower case", async ({ mount }) => {
   const component = await mount(
     <FormTextTestComponent
       onChange={{
-        name: v => {
+        stringField: v => {
           nameValue = v;
         }
       }}
@@ -60,7 +60,7 @@ test("performs text transform upper case", async ({ mount }) => {
   const component = await mount(
     <FormTextTestComponent
       onChange={{
-        name: v => {
+        stringField: v => {
           nameValue = v;
         }
       }}
@@ -92,7 +92,7 @@ test.skip("renders error message", async ({ mount }) => {
   const alwaysErrorValidator = () => expected;
 
   // Act
-  const component = await mount(<FormTextTestComponent formOptions={{ fields: { name: { validators: [alwaysErrorValidator] }, age: {} } }} />);
+  const component = await mount(<FormTextTestComponent formOptions={{ fields: { stringField: { validators: [alwaysErrorValidator] }, numberField: {} } }} />);
 
   // touch text box
   const textBox = component.getByRole("textbox");

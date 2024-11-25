@@ -7,7 +7,7 @@ import { TestWrapper } from "../../../test-components/test-wrapper";
 type FormTextTestComponentProps = Partial<Pick<ReturnType<typeof useTestForm>["fm"], "onChange">> & {
   formOptions?: UseTestFormOptions;
   isSubmitting?: boolean;
-  formTextProps?: OmitSafe<FormTextProps<TestFormFields, "name">, "formManager" | "fieldName">;
+  formTextProps?: OmitSafe<FormTextProps<TestFormFields, "stringField">, "formManager" | "fieldName">;
 };
 
 export const FormTextTestComponent = (props: FormTextTestComponentProps) => {
@@ -19,7 +19,7 @@ export const FormTextTestComponent = (props: FormTextTestComponentProps) => {
 
   return (
     <TestWrapper>
-      <FormText formManager={fm} fieldName="name" {...formTextProps} />
+      <FormText formManager={fm} fieldName="stringField" {...formTextProps} />
     </TestWrapper>
   );
 };

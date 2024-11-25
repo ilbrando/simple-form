@@ -1,8 +1,8 @@
 import { getFormManager, useFormDefinition } from "@ilbrando/simple-form";
 
 export type TestFormFields = {
-  name: string;
-  age: number;
+  stringField: string;
+  numberField: number;
 };
 
 export type UseTestFormOptions = Parameters<typeof useFormDefinition<TestFormFields>>[0];
@@ -10,8 +10,8 @@ export type UseTestFormOptions = Parameters<typeof useFormDefinition<TestFormFie
 export const useTestForm = (options?: UseTestFormOptions, isSubmitting: boolean = false) => {
   const effectiveOptions: UseTestFormOptions = options ?? {
     fields: {
-      name: {},
-      age: {}
+      stringField: {},
+      numberField: {}
     }
   };
 

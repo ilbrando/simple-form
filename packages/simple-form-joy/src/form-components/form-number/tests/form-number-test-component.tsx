@@ -7,7 +7,7 @@ import { TestWrapper } from "../../../test-components/test-wrapper";
 type FormNumberTestComponentProps = Partial<Pick<ReturnType<typeof useTestForm>["fm"], "onChange">> & {
   formOptions?: UseTestFormOptions;
   isSubmitting?: boolean;
-  formNumberProps?: OmitSafe<FormNumberProps<TestFormFields, "age">, "formManager" | "fieldName">;
+  formNumberProps?: OmitSafe<FormNumberProps<TestFormFields, "numberField">, "formManager" | "fieldName">;
 };
 
 export const FormNumberTestComponent = (props: FormNumberTestComponentProps) => {
@@ -19,7 +19,7 @@ export const FormNumberTestComponent = (props: FormNumberTestComponentProps) => 
 
   return (
     <TestWrapper>
-      <FormNumber formManager={fm} fieldName="age" {...formTextProps} />
+      <FormNumber formManager={fm} fieldName="numberField" {...formTextProps} />
     </TestWrapper>
   );
 };
