@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vitest";
 
-import { ensureValue, hasValue, hasValueAndNotEmptyString, isEqual, isNumber, isObject, isString, removeNullProps, undefinedToNull } from "./object-utils";
+import { deepMerge, ensureValue, hasValue, hasValueAndNotEmptyString, isEqual, isNumber, isObject, isString, removeNullProps, undefinedToNull } from "./object-utils";
 
 describe("object-utils", () => {
   test.each`
@@ -143,6 +143,24 @@ describe("object-utils", () => {
   `("undefinedToNull($value) => $expected", ({ value, expected }) => {
     // Act
     const actual = undefinedToNull(value);
+
+    // Assert
+    expect(actual).toEqual(expected);
+  });
+
+  test.each`
+    value1                     | value2                     | expected
+    ${{ a: 42 }}               | ${{ a: 42 }}               | ${{ a: 42 }}
+    ${{ a: 42 }}               | ${{ a: 43 }}               | ${{ a: 43 }}
+    ${{}}                      | ${{ a: 43 }}               | ${{ a: 43 }}
+    ${{ a: 42 }}               | ${{}}                      | ${{ a: 42 }}
+    ${{ a: 42 }}               | ${{ b: 43 }}               | ${{ a: 42, b: 43 }}
+    ${{ a: { b: 42 } }}        | ${{ a: { b: 43 } }}        | ${{ a: { b: 43 } }}
+    ${{ a: { b: 42, c: 20 } }} | ${{ a: { b: 43 } }}        | ${{ a: { b: 43, c: 20 } }}
+    ${{ a: { b: 42 } }}        | ${{ a: { b: 43, c: 20 } }} | ${{ a: { b: 43, c: 20 } }}
+  `("deepMerge($value1, $value2) => $expected", ({ value1, value2, expected }) => {
+    // Act
+    const actual = deepMerge(value1, value2);
 
     // Assert
     expect(actual).toEqual(expected);

@@ -1,4 +1,5 @@
 import { getFormManager, useFormDefinition } from "@ilbrando/simple-form";
+import { deepMerge, DeepPartial } from "@ilbrando/utils";
 
 export type TestFormFields = {
   stringField: string;
@@ -7,13 +8,16 @@ export type TestFormFields = {
 
 export type UseTestFormOptions = Parameters<typeof useFormDefinition<TestFormFields>>[0];
 
-export const useTestForm = (options?: UseTestFormOptions, isSubmitting: boolean = false) => {
-  const effectiveOptions: UseTestFormOptions = options ?? {
-    fields: {
-      stringField: {},
-      numberField: {}
-    }
-  };
+export const useTestForm = (options?: DeepPartial<UseTestFormOptions>, isSubmitting: boolean = false) => {
+  const effectiveOptions = deepMerge<UseTestFormOptions>(
+    {
+      fields: {
+        stringField: {},
+        numberField: {}
+      }
+    },
+    options ?? {}
+  );
 
   const fd = useFormDefinition<TestFormFields>(effectiveOptions);
 

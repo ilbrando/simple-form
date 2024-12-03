@@ -92,7 +92,7 @@ test.skip("renders error message", async ({ mount }) => {
   const alwaysErrorValidator = () => expected;
 
   // Act
-  const component = await mount(<FormTextTestComponent formOptions={{ fields: { stringField: { validators: [alwaysErrorValidator] }, numberField: {} } }} />);
+  const component = await mount(<FormTextTestComponent formOptions={{ fields: { stringField: { validators: [alwaysErrorValidator] } } }} />);
 
   // touch text box
   const textBox = component.getByRole("textbox");
