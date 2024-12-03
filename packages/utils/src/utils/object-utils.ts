@@ -1,4 +1,4 @@
-import { DeepPartial, MakeOptional, Maybe } from "./type-utils";
+import { DeepPartial, Maybe } from "./type-utils";
 
 /** Returns `true` if {@param value} is not `null` and not `undefined`.
  * You can use this function instead of relying on javascripts {@link https://developer.mozilla.org/en-US/docs/Glossary/Truthy|truthy system}
