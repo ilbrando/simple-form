@@ -14,8 +14,6 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 21
-      - name: Verify Change Logs
-        run: node common/scripts/install-run-rush.js change --verify
       - name: Rush install
         run: node common/scripts/install-run-rush.js install
       - name: Rush rebuild
@@ -24,3 +22,5 @@ jobs:
         run: node common/scripts/install-run-rush.js test
       - name: Rush eslint
         run: node common/scripts/install-run-rush.js eslint
+      - name: Verify Change Logs
+        run: node common/scripts/install-run-rush.js change --verify
