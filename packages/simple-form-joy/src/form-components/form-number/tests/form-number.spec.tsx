@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 
+import { alwaysErrorValidatorMessage } from "src/test-components/form-utils";
+
 import { FormNumberTestComponent } from "./form-number-test-component";
 
 test("updates form state when receiving input", async ({ mount }) => {
@@ -50,18 +52,27 @@ test("renders invalid value message", async ({ mount }) => {
   await expect(component).toContainText(expected);
 });
 
-test.skip("renders error message", async ({ mount }) => {
-  // Arrange
-  const expected = "Error message";
-  const alwaysErrorValidator = () => expected;
-
+test("renders error message for invalid value", async ({ mount }) => {
   // Act
-  const component = await mount(<FormNumberTestComponent formOptions={{ fields: { numberField: { validators: [alwaysErrorValidator] } } }} />);
+  const component = await mount(<FormNumberTestComponent />);
 
   // touch text box
   const textBox = component.getByRole("textbox");
   await textBox.fill("not expected");
 
   // Assert
-  await expect(component).toContainText(expected);
+  await expect(component).toContainText("Invalid value");
+});
+
+test("renders error message for validation error", async ({ mount }) => {
+  // Act
+  const component = await mount(<FormNumberTestComponent formOptions={{ numberField: { useAlwaysErrorValidator: true } }} />);
+
+  // touch text box
+  const textBox = component.getByRole("textbox");
+  await textBox.fill("1");
+  await textBox.fill("");
+
+  // Assert
+  await expect(component).toContainText(alwaysErrorValidatorMessage);
 });

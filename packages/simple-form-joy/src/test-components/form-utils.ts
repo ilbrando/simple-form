@@ -7,20 +7,44 @@ export type TestFormFields = {
   booleanField: boolean;
 };
 
-export type UseTestFormOptions = Parameters<typeof useFormDefinition<TestFormFields>>[0];
+export const alwaysErrorValidatorMessage = "Always error";
+
+const alwaysErrorValidator = () => alwaysErrorValidatorMessage;
+
+type TestFormFieldsDefinitions = Parameters<typeof useFormDefinition<TestFormFields>>[0]["fields"];
+
+export type UseTestFormOptions = {
+  [P in keyof TestFormFieldsDefinitions]: Pick<TestFormFieldsDefinitions[P], "initialValue" | "initialIsDisabled"> & { useAlwaysErrorValidator?: boolean };
+};
 
 export const useTestForm = (options?: DeepPartial<UseTestFormOptions>, isSubmitting: boolean = false) => {
   const defaultOptions: UseTestFormOptions = {
-    fields: {
-      stringField: {},
-      numberField: {},
-      booleanField: {}
-    }
+    stringField: {},
+    numberField: {},
+    booleanField: {}
   };
 
   const effectiveOptions = deepMerge<UseTestFormOptions>(defaultOptions, options ?? {});
 
-  const fd = useFormDefinition<TestFormFields>(effectiveOptions);
+  const fd = useFormDefinition<TestFormFields>({
+    fields: {
+      stringField: {
+        initialValue: effectiveOptions.stringField.initialValue,
+        initialIsDisabled: effectiveOptions.stringField.initialIsDisabled,
+        validators: effectiveOptions.stringField.useAlwaysErrorValidator ?? false ? [alwaysErrorValidator] : []
+      },
+      numberField: {
+        initialValue: effectiveOptions.numberField.initialValue,
+        initialIsDisabled: effectiveOptions.numberField.initialIsDisabled,
+        validators: effectiveOptions.numberField.useAlwaysErrorValidator ?? false ? [alwaysErrorValidator] : []
+      },
+      booleanField: {
+        initialValue: effectiveOptions.booleanField.initialValue,
+        initialIsDisabled: effectiveOptions.booleanField.initialIsDisabled,
+        validators: effectiveOptions.booleanField.useAlwaysErrorValidator ?? false ? [alwaysErrorValidator] : []
+      }
+    }
+  });
 
   const fm = getFormManager(fd, isSubmitting);
 

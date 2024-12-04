@@ -1,5 +1,7 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 
+import { alwaysErrorValidatorMessage } from "src/test-components/form-utils";
+
 import { FormTextTestComponent } from "./form-text-test-component";
 
 test("updates form state when receiving input", async ({ mount }) => {
@@ -86,18 +88,14 @@ test("renders label", async ({ mount }) => {
   await expect(component).toContainText(expected);
 });
 
-test.skip("renders error message", async ({ mount }) => {
-  // Arrange
-  const expected = "Error message";
-  const alwaysErrorValidator = () => expected;
-
+test("renders error message", async ({ mount }) => {
   // Act
-  const component = await mount(<FormTextTestComponent formOptions={{ fields: { stringField: { validators: [alwaysErrorValidator] } } }} />);
+  const component = await mount(<FormTextTestComponent formOptions={{ stringField: { useAlwaysErrorValidator: true } }} />);
 
   // touch text box
   const textBox = component.getByRole("textbox");
   await textBox.fill("not expected");
 
   // Assert
-  await expect(component).toContainText(expected);
+  await expect(component).toContainText(alwaysErrorValidatorMessage);
 });
