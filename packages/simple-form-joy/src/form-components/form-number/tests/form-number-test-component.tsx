@@ -11,7 +11,7 @@ type FormNumberTestComponentProps = Partial<Pick<ReturnType<typeof useTestForm>[
 };
 
 export const FormNumberTestComponent = (props: FormNumberTestComponentProps) => {
-  const { onChange, formOptions, isSubmitting, formNumberProps: formTextProps } = props;
+  const { onChange, formOptions, isSubmitting, formNumberProps } = props;
 
   const { fm } = useTestForm(formOptions, isSubmitting);
 
@@ -19,7 +19,7 @@ export const FormNumberTestComponent = (props: FormNumberTestComponentProps) => 
 
   return (
     <TestWrapper>
-      <FormNumber formManager={fm} fieldName="numberField" {...formTextProps} />
+      <FormNumber formManager={fm} fieldName="numberField" {...formNumberProps} />
     </TestWrapper>
   );
 };

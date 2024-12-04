@@ -4,7 +4,7 @@ import { FormTextTestComponent } from "./form-text-test-component";
 
 test("updates form state when receiving input", async ({ mount }) => {
   // Arrange
-  let nameValue: string | null = null;
+  let stringValue: string | null = null;
   const expected = "abc";
 
   // Act
@@ -12,7 +12,7 @@ test("updates form state when receiving input", async ({ mount }) => {
     <FormTextTestComponent
       onChange={{
         stringField: v => {
-          nameValue = v;
+          stringValue = v;
         }
       }}
     />
@@ -22,12 +22,12 @@ test("updates form state when receiving input", async ({ mount }) => {
   await textBox.fill(expected);
 
   // Assert
-  expect(nameValue).toBe(expected);
+  expect(stringValue).toBe(expected);
 });
 
 test("performs text transform lower case", async ({ mount }) => {
   // Arrange
-  let nameValue: string | null = null;
+  let stringValue: string | null = null;
   const entered = "aBc";
   const expected = entered.toLowerCase();
 
@@ -36,7 +36,7 @@ test("performs text transform lower case", async ({ mount }) => {
     <FormTextTestComponent
       onChange={{
         stringField: v => {
-          nameValue = v;
+          stringValue = v;
         }
       }}
       formTextProps={{ textTransform: "lower-case" }}
@@ -47,12 +47,12 @@ test("performs text transform lower case", async ({ mount }) => {
   await textBox.fill(entered);
 
   // Assert
-  expect(nameValue).toBe(expected);
+  expect(stringValue).toBe(expected);
 });
 
 test("performs text transform upper case", async ({ mount }) => {
   // Arrange
-  let nameValue: string | null = null;
+  let stringValue: string | null = null;
   const entered = "aBc";
   const expected = entered.toUpperCase();
 
@@ -61,7 +61,7 @@ test("performs text transform upper case", async ({ mount }) => {
     <FormTextTestComponent
       onChange={{
         stringField: v => {
-          nameValue = v;
+          stringValue = v;
         }
       }}
       formTextProps={{ textTransform: "upper-case" }}
@@ -72,7 +72,7 @@ test("performs text transform upper case", async ({ mount }) => {
   await textBox.fill(entered);
 
   // Assert
-  expect(nameValue).toBe(expected);
+  expect(stringValue).toBe(expected);
 });
 
 test("renders label", async ({ mount }) => {

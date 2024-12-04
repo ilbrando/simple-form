@@ -4,7 +4,7 @@ import { FormNumberTestComponent } from "./form-number-test-component";
 
 test("updates form state when receiving input", async ({ mount }) => {
   // Arrange
-  let ageValue: number | null = null;
+  let numberValue: number | null = null;
   const expected = 123;
 
   // Act
@@ -12,7 +12,7 @@ test("updates form state when receiving input", async ({ mount }) => {
     <FormNumberTestComponent
       onChange={{
         numberField: v => {
-          ageValue = v;
+          numberValue = v;
         }
       }}
     />
@@ -22,7 +22,7 @@ test("updates form state when receiving input", async ({ mount }) => {
   await textBox.fill(expected.toString());
 
   // Assert
-  expect(ageValue).toBe(expected);
+  expect(numberValue).toBe(expected);
 });
 
 test("renders label", async ({ mount }) => {
