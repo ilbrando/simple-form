@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 
-import { alwaysErrorValidatorMessage } from "src/test-components/form-utils";
+import { alwaysErrorValidatorMessage } from "src/test-components/use-test-form";
 
 import { FormNumberTestComponent } from "./form-number-test-component";
 

@@ -1,7 +1,7 @@
 import { DeepPartial, OmitSafe } from "@ilbrando/utils";
 
 import { FormNumber, FormNumberProps } from "../form-number";
-import { TestFormFields, useTestForm, UseTestFormOptions } from "../../../test-components/form-utils";
+import { TestFormFields, useTestForm, UseTestFormOptions } from "../../../test-components/use-test-form";
 import { TestWrapper } from "../../../test-components/test-wrapper";
 
 type FormNumberTestComponentProps = Partial<Pick<ReturnType<typeof useTestForm>["fm"], "onChange">> & {

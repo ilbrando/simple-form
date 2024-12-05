@@ -1,7 +1,7 @@
 import { DeepPartial, OmitSafe } from "@ilbrando/utils";
 
 import { FormRadioGroup, FormRadioGroupProps } from "../form-radio-group";
-import { TestFormFields, useTestForm, UseTestFormOptions } from "../../../test-components/form-utils";
+import { TestFormFields, useTestForm, UseTestFormOptions } from "../../../test-components/use-test-form";
 import { TestWrapper } from "../../../test-components/test-wrapper";
 
 import { options } from "./test-data";
