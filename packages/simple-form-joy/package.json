@@ -34,7 +34,8 @@
     "type-check": "tsc --noEmit --watch",
     "build": "vite build && tsc -p tsconfig-declarations.json",
     "eslint": "eslint --max-warnings=0",
-    "test": "playwright test -c playwright-ct.config.ts"
+    "test": "playwright test -c playwright-ct.config.ts",
+    "test-ui": "playwright test -c playwright-ct.config.ts --ui"
   },
   "devDependencies": {
     "@ilbrando/eslint-plugin": "workspace:*",
