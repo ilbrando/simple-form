@@ -5,6 +5,7 @@ export type TestFormFields = {
   stringField: string;
   numberField: number;
   booleanField: boolean;
+  rangeField: { from: number; to: number };
 };
 
 export const alwaysErrorValidatorMessage = "Always error";
@@ -21,7 +22,8 @@ export const useTestForm = (options?: DeepPartial<UseTestFormOptions>, isSubmitt
   const defaultOptions: UseTestFormOptions = {
     stringField: {},
     numberField: {},
-    booleanField: {}
+    booleanField: {},
+    rangeField: {}
   };
 
   const effectiveOptions = deepMerge<UseTestFormOptions>(defaultOptions, options ?? {});
@@ -42,6 +44,11 @@ export const useTestForm = (options?: DeepPartial<UseTestFormOptions>, isSubmitt
         initialValue: effectiveOptions.booleanField.initialValue,
         initialIsDisabled: effectiveOptions.booleanField.initialIsDisabled,
         validators: effectiveOptions.booleanField.useAlwaysErrorValidator ?? false ? [alwaysErrorValidator] : []
+      },
+      rangeField: {
+        initialValue: effectiveOptions.rangeField.initialValue,
+        initialIsDisabled: effectiveOptions.rangeField.initialIsDisabled,
+        validators: effectiveOptions.rangeField.useAlwaysErrorValidator ?? false ? [alwaysErrorValidator] : []
       }
     }
   });
