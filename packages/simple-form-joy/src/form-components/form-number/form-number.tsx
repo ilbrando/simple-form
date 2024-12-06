@@ -9,7 +9,7 @@ import { FormFieldBaseProps } from "../types";
 
 type FormValue = number;
 
-type FormNumberProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<InputProps, "value" | "error" | "required" | "onChange"> & FormFieldBaseProps<TFields, FormValue, TFieldName>;
+export type FormNumberProps<TFields, TFieldName extends PropKeysOf<TFields, FormValue>> = OmitSafe<InputProps, "value" | "error" | "required" | "onChange"> & FormFieldBaseProps<TFields, FormValue, TFieldName>;
 
 const isValidValue = (value: string) => /^[-]?(\d+)$/.test(value);
 

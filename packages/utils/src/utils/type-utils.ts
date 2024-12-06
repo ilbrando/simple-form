@@ -91,3 +91,7 @@ export type InferArrayItem<T> = T extends Array<infer I> ? I : never;
  * const x: Arbitrary<S> = "y"; // but all other strings are also valid
  */
 export type Arbitrary<T extends string> = T | Omit<string, T>;
+
+export type DeepPartial<T> = {
+  [P in keyof T]?: T[P] extends object ? DeepPartial<T[P]> : T[P];
+};

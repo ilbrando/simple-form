@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/utils",
+      "comment": "Object utils",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/utils"
+}

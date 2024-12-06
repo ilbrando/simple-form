@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form",
+      "comment": "Update vite",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form"
+}

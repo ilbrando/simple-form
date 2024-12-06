@@ -1,4 +1,4 @@
-import { Maybe } from "./type-utils";
+import { DeepPartial, Maybe } from "./type-utils";
 
 /** Returns `true` if {@param value} is not `null` and not `undefined`.
  * You can use this function instead of relying on javascripts {@link https://developer.mozilla.org/en-US/docs/Glossary/Truthy|truthy system}
@@ -92,6 +92,29 @@ export const undefinedToNull = <T extends Record<string, unknown>>(obj: T) => {
     }
   }
   return result;
+};
+
+/**
+ * Deep merges two objects. The resulting object will contain all the properties in
+ * either of the two objects. If a property has a value in object 2 it overrides
+ * the corresponding value in object 1.
+ *
+ * This function can break type safety because it is up to the caller to ensure
+ * that the two partial objects in combination results in a valid object of the
+ * specified type.
+ */
+export const deepMerge = <T extends Record<string, unknown>>(obj1: DeepPartial<T>, obj2: DeepPartial<T>): T => {
+  const result = { ...obj1 };
+  const keys = [...new Set([...Reflect.ownKeys(obj1), ...Reflect.ownKeys(obj2)])];
+  for (const key of keys) {
+    const value1 = Reflect.get(obj1, key);
+    const value2 = Reflect.get(obj2, key);
+    Reflect.set(result, key, value2 ?? value1);
+    if (typeof value1 === "object" || typeof value2 === "object") {
+      Reflect.set(result, key, deepMerge(value1 ?? {}, value2 ?? {}));
+    }
+  }
+  return result as T;
 };
 
 /**

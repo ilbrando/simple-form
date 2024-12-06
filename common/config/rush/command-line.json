@@ -184,6 +184,13 @@
     },
     {
       "commandKind": "bulk",
+      "name": "test-ui",
+      "summary": "Run unit tests. Component tests are run in UI mode.",
+      "enableParallelism": true,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
       "name": "eslint",
       "summary": "Lints all projects",
       "enableParallelism": false,
