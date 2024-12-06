@@ -2,6 +2,29 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.1.3",
+      "tag": "@ilbrando/simple-form-joy_v2.1.3",
+      "date": "Fri, 06 Dec 2024 15:55:34 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Component tests"
+          },
+          {
+            "comment": "Component tests"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `1.0.4`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/simple-form\" to `1.0.5`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.2",
       "tag": "@ilbrando/simple-form-joy_v2.1.2",
       "date": "Sat, 09 Nov 2024 17:13:53 GMT",
