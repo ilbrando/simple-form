@@ -46,8 +46,6 @@ export const FormAutocompleteMultiple = function <TFields, TFormValue extends Fo
               editor.setFieldValue(null);
               break;
             case "selectOption":
-              editor.setFieldValue(v);
-              break;
             case "removeOption":
               editor.setFieldValue(v);
               break;
