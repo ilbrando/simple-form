@@ -2,6 +2,26 @@
   "name": "@ilbrando/simple-form-material-ui",
   "entries": [
     {
+      "version": "3.0.4",
+      "tag": "@ilbrando/simple-form-material-ui_v3.0.4",
+      "date": "Fri, 06 Dec 2024 16:02:35 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Component tests"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `1.0.4`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/simple-form\" to `1.0.5`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.3",
       "tag": "@ilbrando/simple-form-material-ui_v3.0.3",
       "date": "Sat, 09 Nov 2024 17:13:53 GMT",
