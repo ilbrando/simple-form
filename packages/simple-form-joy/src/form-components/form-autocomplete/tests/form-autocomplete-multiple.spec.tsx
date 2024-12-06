@@ -1,7 +1,5 @@
 import { expect, test } from "@playwright/experimental-ct-react";
 
-import { alwaysErrorValidatorMessage } from "src/test-components/use-test-form";
-
 import { FormAutocompleteMultipleTestComponent } from "./form-autocomplete-multiple-test-component";
 import { options } from "./test-data";
 
