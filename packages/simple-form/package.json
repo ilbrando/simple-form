@@ -35,7 +35,7 @@
     "eslint": "eslint --max-warnings=0"
   },
   "devDependencies": {
-    "@types/react": "^19.0.1",
+    "@types/react": "~18",
     "@ilbrando/eslint-plugin": "workspace:*",
     "@vitejs/plugin-react": "~4.3.4",
     "eslint": "~9.16.0",
