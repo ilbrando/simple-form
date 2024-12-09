@@ -22,8 +22,7 @@
   "types": "lib/index.d.ts",
   "exports": {
     "require": "./lib/index.cjs",
-    "import": "./lib/index.js",
-    "types": "./lib/index.d.ts"
+    "import": "./lib/index.js"
   },
   "files": [
     "lib"
@@ -37,13 +36,13 @@
   },
   "devDependencies": {
     "@ilbrando/eslint-plugin": "workspace:*",
-    "@types/react": "^18",
+    "@types/react": "^19.0.1",
     "@types/react-dom": "^18",
-    "@vitejs/plugin-react": "~4.3.3",
-    "eslint": "~9.4.0",
+    "@vitejs/plugin-react": "~4.3.4",
+    "eslint": "~9.16.0",
     "npm-run-all": "~4.1.5",
-    "typescript": "~5.4.5",
-    "vite": "~5.4.11"
+    "typescript": "~5.7.2",
+    "vite": "~6.0.3"
   },
   "dependencies": {
     "@ilbrando/utils": "workspace:*",
