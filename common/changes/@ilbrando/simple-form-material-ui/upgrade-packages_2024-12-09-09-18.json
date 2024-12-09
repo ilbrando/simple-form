@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "Upgrade packages",
+      "type": "patch",
+      "packageName": "@ilbrando/simple-form-material-ui"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form-material-ui",
+  "email": "michael@ilbrando.dk"
+}

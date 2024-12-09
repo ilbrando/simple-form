@@ -1,0 +1,11 @@
+{
+  "changes": [
+    {
+      "comment": "Upgrade packages",
+      "type": "patch",
+      "packageName": "@ilbrando/eslint-plugin"
+    }
+  ],
+  "packageName": "@ilbrando/eslint-plugin",
+  "email": "michael@ilbrando.dk"
+}
