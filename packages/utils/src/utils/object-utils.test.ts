@@ -158,6 +158,8 @@ describe("object-utils", () => {
     ${{ a: { b: 42 } }}        | ${{ a: { b: 43 } }}        | ${{ a: { b: 43 } }}
     ${{ a: { b: 42, c: 20 } }} | ${{ a: { b: 43 } }}        | ${{ a: { b: 43, c: 20 } }}
     ${{ a: { b: 42 } }}        | ${{ a: { b: 43, c: 20 } }} | ${{ a: { b: 43, c: 20 } }}
+    ${{ a: { b: 42 } }}        | ${{ a: { c: 20 } }}        | ${{ a: { b: 42, c: 20 } }}
+    ${{ a: { b: { c: 42 } } }} | ${{ a: { b: { d: 40 } } }} | ${{ a: { b: { c: 42, d: 40 } } }}
   `("deepMerge($value1, $value2) => $expected", ({ value1, value2, expected }) => {
     // Act
     const actual = deepMerge(value1, value2);

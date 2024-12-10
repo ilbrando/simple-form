@@ -12,7 +12,7 @@ type FormFields = {
   jobTitle: string;
 };
 
-const FormStory = ({ onSubmit }: { onSubmit?: (values: MakeNullable<FormFields>) => void }) => {
+const FormStory = ({ onSubmit }: { onSubmit?: (values: Partial<MakeNullable<FormFields>>) => void }) => {
   const { required, maxLength } = useValidationRules();
 
   const [isSubmitting, setIsSubmitting] = useState(false); // story book simulate submitting
