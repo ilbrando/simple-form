@@ -71,14 +71,14 @@ export const getFormManager = <TFields>(formDefinition: ReturnType<typeof useFor
      * form manager can be passed on to field controls and they have access to the submitting state.
      */
     isSubmitting,
-    /** An object with values for all fields that are not disabled. If validation for a field isn't successfull the value is `null`.
+    /** An object with values for all fields that are not disabled. If validation for a field isn't successful the value is `null`.
      */
     values,
     /** An object with values for the fields that have changed (compared with initial values). */
     modifiedValues,
     /** Is `true` if `modifiedValues` contains any fields/values. */
     hasModifiedValues,
-    /** Validates all fields and returns `true` if all validations succeded.
+    /** Validates all fields and returns `true` if all validations succeeded.
      *
      * You will normally call this function in a submit handler and only proceed if the result is `true`.
      */
@@ -98,7 +98,7 @@ export const getFormManager = <TFields>(formDefinition: ReturnType<typeof useFor
      * present in `values`.
      */
     setIsDisabled,
-    /** You can set a handler for each field and recieve notifications, when the field value is changed. */
+    /** You can set a handler for each field and receive notifications, when the field value is changed. */
     onChange
   };
 };

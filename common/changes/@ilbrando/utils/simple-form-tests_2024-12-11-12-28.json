@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/utils",
+      "comment": "Fixed the type for getFieldValues",
+      "type": "major"
+    }
+  ],
+  "packageName": "@ilbrando/utils"
+}

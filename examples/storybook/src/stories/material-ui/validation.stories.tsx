@@ -11,7 +11,7 @@ type FormFields = {
   age: number;
 };
 
-const FormStory = ({ onSubmit }: { onSubmit?: (values: MakeNullable<FormFields>) => void }) => {
+const FormStory = ({ onSubmit }: { onSubmit?: (values: Partial<MakeNullable<FormFields>>) => void }) => {
   const { required, maxLength, min } = useValidationRules();
 
   const [isSubmitting, setIsSubmitting] = useState(false); // story book simulate submitting

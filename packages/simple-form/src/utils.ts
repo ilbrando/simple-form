@@ -62,8 +62,8 @@ export const setFieldState = <TFields, TFieldName extends keyof TFields, TFieldV
 
 const getFieldValue = <TFields, TFieldName extends keyof TFields>(fieldFormState: FormState<TFields>[TFieldName]) => (hasValue(fieldFormState.errorMessage) ? null : fieldFormState.value);
 
-export const getFieldValues = <TFields>(formState: FormState<TFields>, fieldNames: (keyof TFields)[]): MakeNullable<TFields> => {
-  const values = {} as MakeNullable<TFields>;
+export const getFieldValues = <TFields>(formState: FormState<TFields>, fieldNames: (keyof TFields)[]) => {
+  const values = {} as Partial<MakeNullable<TFields>>;
 
   fieldNames.forEach(fieldName => {
     if (formState[fieldName].isDisabled) return;
