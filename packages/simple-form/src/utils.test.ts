@@ -2,7 +2,7 @@ import { beforeAll, describe, expect, test } from "vitest";
 import { deepMerge, DeepPartial } from "@ilbrando/utils";
 
 import { FormState } from "./form-types";
-import { getFieldValues, getHasErrors } from "./utils";
+import { getFieldValues, getHasErrors, touchAllFieldsAndUpdateState } from "./utils";
 
 type FormFields = {
   stringField: string;
@@ -80,6 +80,17 @@ describe("utils", () => {
 
       // Assert
       expect(actual).toEqual(expected);
+    });
+  });
+
+  describe("touchAllFieldsAndUpdateState", () => {
+    test("it sets all fields to touched", () => {
+      // Act
+      touchAllFieldsAndUpdateState(formState, ["stringField", "numberField"]);
+
+      // Assert
+      expect(formState.stringField.isTouched).toBeTruthy();
+      expect(formState.numberField.isTouched).toBeTruthy();
     });
   });
 });
