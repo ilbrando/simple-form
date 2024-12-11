@@ -1,6 +1,17 @@
 # Change Log - @ilbrando/utils
 
-This log was last generated on Fri, 06 Dec 2024 16:02:35 GMT and should not be manually modified.
+This log was last generated on Wed, 11 Dec 2024 12:39:47 GMT and should not be manually modified.
+
+## 2.0.0
+Wed, 11 Dec 2024 12:39:47 GMT
+
+### Breaking changes
+
+- Fixed the type for getFieldValues
+
+### Patches
+
+- Upgrade packages
 
 ## 1.0.4
 Fri, 06 Dec 2024 16:02:35 GMT

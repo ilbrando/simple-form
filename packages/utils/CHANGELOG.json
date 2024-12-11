@@ -2,6 +2,28 @@
   "name": "@ilbrando/utils",
   "entries": [
     {
+      "version": "2.0.0",
+      "tag": "@ilbrando/utils_v2.0.0",
+      "date": "Wed, 11 Dec 2024 12:39:47 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Fixed the type for getFieldValues"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Upgrade packages"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/eslint-plugin\" to `1.0.2`"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.4",
       "tag": "@ilbrando/utils_v1.0.4",
       "date": "Fri, 06 Dec 2024 16:02:35 GMT",

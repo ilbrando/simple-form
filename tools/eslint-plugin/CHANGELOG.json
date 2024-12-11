@@ -2,6 +2,23 @@
   "name": "@ilbrando/eslint-plugin",
   "entries": [
     {
+      "version": "1.0.2",
+      "tag": "@ilbrando/eslint-plugin_v1.0.2",
+      "date": "Wed, 11 Dec 2024 12:39:47 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Upgrade packages"
+          }
+        ],
+        "none": [
+          {
+            "comment": "Remove eslint script"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.1",
       "tag": "@ilbrando/eslint-plugin_v1.0.1",
       "date": "Thu, 20 Jun 2024 13:16:18 GMT",
