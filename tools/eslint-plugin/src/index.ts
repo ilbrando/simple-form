@@ -21,8 +21,8 @@ const plugin = {
 } satisfies FlatConfig.Plugin;
 
 /*
- extends: ["eslint:recommended", "plugin:react/recommended", "plugin:react/jsx-runtime", "plugin:@typescript-eslint/recommended", "prettier"],
-  plugins: ["@typescript-eslint", "react", "react-hooks", "@rankingmanager/eslint-plugin-rankingmanager", "prettier"],
+ extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
+  plugins: ["@typescript-eslint", "prettier"],
  
 */
 const configs = {
