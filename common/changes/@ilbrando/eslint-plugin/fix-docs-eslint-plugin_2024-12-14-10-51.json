@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/eslint-plugin",
+      "comment": "Fixed documentation for eslint-plugin",
+      "type": "none"
+    }
+  ],
+  "packageName": "@ilbrando/eslint-plugin"
+}
