@@ -100,7 +100,7 @@ const FormStory = (props: FormStoryProps) => {
     simpleForm: {
       reserveSpaceForValidationMessage
     },
-    // If you think form component take up too much space then reserveSpaceForValidationMessage you can decrease
+    // If you think form component takes up too much space then with reserveSpaceForValidationMessage you can decrease
     // the margin between the helper text (error message) and the input.
     components: reserveSpaceForValidationMessage
       ? {
@@ -114,18 +114,19 @@ const FormStory = (props: FormStoryProps) => {
         }
       : undefined
   });
+
   return (
     <ThemeProvider theme={theme}>
       <Box display="grid" gridTemplateColumns="400px auto" gap={2}>
         <Box gridColumn="1" display="flex" flexDirection="column" gap={reserveSpaceForValidationMessage ? 0 : 1}>
-          <FormText formManager={fm} fieldName="textField" label="Text Field" disabled={isDisabled} readOnly={isReadOnly} size={size} />
-          <FormNumber formManager={fm} fieldName="numberField" label="Number Field" disabled={isDisabled} readOnly={isReadOnly} size={size} />
-          <FormAutocomplete formManager={fm} fieldName="autocompleteField" label="Autocomplete Field" options={autocompleteOptions} disabled={isDisabled} size={size} />
-          <FormAutocompleteMultiple formManager={fm} fieldName="autocompleteMultipleField" label="Autocomplete Field (multiple)" options={autocompleteOptions} disabled={isDisabled} size={size} />
-          <FormRadioGroup formManager={fm} fieldName="radiogroupField" label="Radiogroup Field" options={radioGroupOptions} disabled={isDisabled} size={size} />
+          <FormText formManager={fm} fieldName="textField" label="Text Field" readOnly={isReadOnly} size={size} />
+          <FormNumber formManager={fm} fieldName="numberField" label="Number Field" readOnly={isReadOnly} size={size} />
+          <FormAutocomplete formManager={fm} fieldName="autocompleteField" label="Autocomplete Field" options={autocompleteOptions} size={size} />
+          <FormAutocompleteMultiple formManager={fm} fieldName="autocompleteMultipleField" label="Autocomplete Field (multiple)" options={autocompleteOptions} size={size} />
+          <FormRadioGroup formManager={fm} fieldName="radiogroupField" label="Radiogroup Field" options={radioGroupOptions} size={size} />
           <FormRangeSlider formManager={fm} fieldName="rangeField" label="Range Slider" min={1} max={10} />
-          <FormSwitch formManager={fm} fieldName="switchField" label="Switch Field" disabled={isDisabled} size={size} />
-          <FormCheckbox formManager={fm} fieldName="checkboxField" label="Checkbox Field" disabled={isDisabled} size={size} />
+          <FormSwitch formManager={fm} fieldName="switchField" label="Switch Field" size={size} />
+          <FormCheckbox formManager={fm} fieldName="checkboxField" label="Checkbox Field" size={size} />
         </Box>
         <Box gridColumn="2">
           <Button onClick={handleSubmit} size={size}>
