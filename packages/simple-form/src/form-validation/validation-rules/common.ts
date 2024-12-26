@@ -4,16 +4,20 @@ import { useLocalization } from "src/localization";
 
 import { Validator } from "../validation-types";
 
+export const isRequiredPropertyName = "isRequired";
+
 export const useCommonValidationRules = () => {
   const { texts } = useLocalization();
 
   const alwaysValid: Validator<unknown> = (_: unknown) => undefined;
 
-  const required = <T>(errorMessage?: string): Validator<T> =>
-    // Must be written like this because the name of the function returned must start with "required".
-    function required(value) {
+  const required = <T>(errorMessage?: string): Validator<T> => {
+    const fn = value => {
       return hasValue(value) ? undefined : errorMessage ?? texts.required;
     };
+    Object.defineProperty(fn, isRequiredPropertyName, { value: true, writable: false });
+    return fn;
+  };
 
   return {
     alwaysValid,
