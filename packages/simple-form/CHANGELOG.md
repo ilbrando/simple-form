@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form
 
-This log was last generated on Wed, 11 Dec 2024 12:39:47 GMT and should not be manually modified.
+This log was last generated on Thu, 26 Dec 2024 20:13:48 GMT and should not be manually modified.
+
+## 2.0.0
+Thu, 26 Dec 2024 20:13:48 GMT
+
+### Breaking changes
+
+- Identification of a required validator has changed to a custom property on the function
 
 ## 1.0.6
 Wed, 11 Dec 2024 12:39:47 GMT

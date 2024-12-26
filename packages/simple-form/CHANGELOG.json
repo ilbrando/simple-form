@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form",
   "entries": [
     {
+      "version": "2.0.0",
+      "tag": "@ilbrando/simple-form_v2.0.0",
+      "date": "Thu, 26 Dec 2024 20:13:48 GMT",
+      "comments": {
+        "major": [
+          {
+            "comment": "Identification of a required validator has changed to a custom property on the function"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.6",
       "tag": "@ilbrando/simple-form_v1.0.6",
       "date": "Wed, 11 Dec 2024 12:39:47 GMT",
