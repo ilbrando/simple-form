@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/utils",
+      "comment": "New utils for undefined and null checks",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ilbrando/utils"
+}
