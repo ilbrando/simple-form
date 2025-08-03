@@ -1,11 +1,17 @@
 import { DeepPartial, Maybe } from "./type-utils";
 
+/** Returns `true` if {@param value} is `undefined` */
+export const isUndefined = (value: unknown) => value === undefined;
+
+/** Returns `true` if {@param value} is `null` */
+export const isNull = (value: unknown) => value === null;
+
 /** Returns `true` if {@param value} is not `null` and not `undefined`.
- * You can use this function instead of relying on javascripts {@link https://developer.mozilla.org/en-US/docs/Glossary/Truthy|truthy system}
- * wich can give unexpected results.
+ * You can use this function instead of relying on JavaScript's {@link https://developer.mozilla.org/en-US/docs/Glossary/Truthy|truthy system}
+ * which can give unexpected results.
  */
 export const hasValue = <T>(value: T | undefined | null): value is T => {
-  return (value as T) !== undefined && (value as T) !== null;
+  return !isUndefined(value) && !isNull(value);
 };
 
 export const isString = (value: unknown): value is string => {

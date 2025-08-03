@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form",
+      "comment": "New getIsFieldModified function on form manager",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form"
+}

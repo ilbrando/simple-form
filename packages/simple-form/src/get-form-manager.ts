@@ -1,3 +1,5 @@
+import { isUndefined } from "@ilbrando/utils";
+
 import { FormFieldState, OnChangeEvents } from "./form-types";
 import { useFormDefinition, useFormDefinitionArray } from "./use-form-definition";
 import { getFieldValues, getHasErrors, getModifiedFieldValues, setFieldState, touchAllFieldsAndUpdateState, validateAllFieldsAndUpdateState } from "./utils";
@@ -62,6 +64,8 @@ export const getFormManager = <TFields>(formDefinition: ReturnType<typeof useFor
   const modifiedValues = getModifiedFieldValues(initialValues, values);
   const hasModifiedValues = Object.entries(modifiedValues).length > 0;
 
+  const getIsFieldModified = <TFieldName extends keyof TFields>(fieldName: TFieldName) => !isUndefined(modifiedValues[fieldName]);
+
   return {
     /** This is the `formState` from the form definition you called this hook with. It is included in the result so the
      * form manager can be passed on to field controls and they have access to the form state.
@@ -78,6 +82,9 @@ export const getFormManager = <TFields>(formDefinition: ReturnType<typeof useFor
     modifiedValues,
     /** Is `true` if `modifiedValues` contains any fields/values. */
     hasModifiedValues,
+    /** Returns true if the fields is modified (compared with initial value).
+     */
+    getIsFieldModified,
     /** Validates all fields and returns `true` if all validations succeeded.
      *
      * You will normally call this function in a submit handler and only proceed if the result is `true`.
