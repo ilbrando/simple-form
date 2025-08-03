@@ -1,6 +1,9 @@
 import { DeepPartial, Maybe } from "./type-utils";
 
+/** Returns `true` if {@param value} is `undefined` */
 export const isUndefined = (value: unknown) => value === undefined;
+
+/** Returns `true` if {@param value} is `null` */
 export const isNull = (value: unknown) => value === null;
 
 /** Returns `true` if {@param value} is not `null` and not `undefined`.
