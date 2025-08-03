@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form
 
-This log was last generated on Thu, 26 Dec 2024 20:13:48 GMT and should not be manually modified.
+This log was last generated on Sun, 03 Aug 2025 07:13:15 GMT and should not be manually modified.
+
+## 2.1.0
+Sun, 03 Aug 2025 07:13:15 GMT
+
+### Minor changes
+
+- New getIsFieldModified function on form manager
 
 ## 2.0.0
 Thu, 26 Dec 2024 20:13:48 GMT

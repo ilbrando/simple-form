@@ -2,6 +2,23 @@
   "name": "@ilbrando/simple-form",
   "entries": [
     {
+      "version": "2.1.0",
+      "tag": "@ilbrando/simple-form_v2.1.0",
+      "date": "Sun, 03 Aug 2025 07:13:15 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "New getIsFieldModified function on form manager"
+          }
+        ],
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `2.1.0`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.0.0",
       "tag": "@ilbrando/simple-form_v2.0.0",
       "date": "Thu, 26 Dec 2024 20:13:48 GMT",

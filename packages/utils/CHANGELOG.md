@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/utils
 
-This log was last generated on Wed, 11 Dec 2024 12:39:47 GMT and should not be manually modified.
+This log was last generated on Sun, 03 Aug 2025 07:13:15 GMT and should not be manually modified.
+
+## 2.1.0
+Sun, 03 Aug 2025 07:13:15 GMT
+
+### Minor changes
+
+- New utils for undefined and null checks
 
 ## 2.0.0
 Wed, 11 Dec 2024 12:39:47 GMT

@@ -1,6 +1,11 @@
 # Change Log - @ilbrando/simple-form-material-ui
 
-This log was last generated on Thu, 26 Dec 2024 20:13:48 GMT and should not be manually modified.
+This log was last generated on Sun, 03 Aug 2025 07:13:15 GMT and should not be manually modified.
+
+## 3.0.7
+Sun, 03 Aug 2025 07:13:15 GMT
+
+_Version update only_
 
 ## 3.0.6
 Thu, 26 Dec 2024 20:13:48 GMT
