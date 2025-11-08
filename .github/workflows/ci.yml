@@ -19,14 +19,7 @@ jobs:
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
       - name: Install Playwright Browsers
-        run: |
-          npx playwright install --with-deps
-          # ensure browsers manifest is present
-          echo "browsers.json:"
-          cat node_modules/playwright-core/browsers.json || true
-          # list downloaded browser cache (Playwright caches under this path)
-          echo "ms-playwright cache:"
-          ls -la node_modules/.cache/ms-playwright || true
+        run: npx playwright install --with-deps
       - name: Rush test
         run: node common/scripts/install-run-rush.js test
       - name: Rush eslint
