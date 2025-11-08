@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/eslint-plugin",
+      "comment": "Improve types for plugin",
+      "type": "patch"
+    }
+  ],
+  "packageName": "@ilbrando/eslint-plugin"
+}
