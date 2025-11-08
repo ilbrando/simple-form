@@ -5,27 +5,15 @@ import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import eslintJs from "@eslint/js";
 import eslintPrettierConfig from "eslint-config-prettier";
 
+type ConfigKeys = "recommended";
+
 // note - cannot migrate this to an import statement because it will make TSC copy the package.json to the dist folder
 const { name, version } = require("../package.json") as {
   name: string;
   version: string;
 };
 
-const plugin = {
-  meta: {
-    name,
-    version
-  },
-  rules,
-  configs: {}
-} satisfies FlatConfig.Plugin;
-
-/*
- extends: ["eslint:recommended", "plugin:@typescript-eslint/recommended", "prettier"],
-  plugins: ["@typescript-eslint", "prettier"],
- 
-*/
-const configs = {
+const configs: Record<ConfigKeys, FlatConfig.Config> = {
   recommended: {
     languageOptions: {
       parser: { parse, parseForESLint },
@@ -35,7 +23,7 @@ const configs = {
     },
     plugins: {
       "@typescript-eslint": typescriptEslintPlugin,
-      "@ilbrando": plugin
+      "@ilbrando": undefined as unknown as FlatConfig.Plugin
     },
     rules: {
       ...eslintJs.configs.recommended.rules,
@@ -79,8 +67,17 @@ const configs = {
       "@ilbrando/no-partial-spread": "error"
     }
   }
-} satisfies FlatConfig.Plugin["configs"];
+};
 
-Object.assign(plugin.configs, configs);
+const plugin: FlatConfig.Plugin & { configs: typeof configs } = {
+  meta: {
+    name,
+    version
+  },
+  rules,
+  configs
+};
+
+configs.recommended.plugins!["@ilbrando"] = plugin;
 
 export default plugin;
