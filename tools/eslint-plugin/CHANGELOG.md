@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/eslint-plugin
 
-This log was last generated on Wed, 11 Dec 2024 12:39:47 GMT and should not be manually modified.
+This log was last generated on Sat, 08 Nov 2025 15:51:44 GMT and should not be manually modified.
+
+## 1.0.3
+Sat, 08 Nov 2025 15:51:44 GMT
+
+### Patches
+
+- Improve types for plugin
 
 ## 1.0.2
 Wed, 11 Dec 2024 12:39:47 GMT

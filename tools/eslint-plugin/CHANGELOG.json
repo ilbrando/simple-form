@@ -2,6 +2,23 @@
   "name": "@ilbrando/eslint-plugin",
   "entries": [
     {
+      "version": "1.0.3",
+      "tag": "@ilbrando/eslint-plugin_v1.0.3",
+      "date": "Sat, 08 Nov 2025 15:51:44 GMT",
+      "comments": {
+        "none": [
+          {
+            "comment": "Fixed documentation for eslint-plugin"
+          }
+        ],
+        "patch": [
+          {
+            "comment": "Improve types for plugin"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.2",
       "tag": "@ilbrando/eslint-plugin_v1.0.2",
       "date": "Wed, 11 Dec 2024 12:39:47 GMT",
