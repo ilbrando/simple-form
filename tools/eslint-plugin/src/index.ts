@@ -13,7 +13,7 @@ const { name, version } = require("../package.json") as {
   version: string;
 };
 
-const configs:Record<ConfigKeys, FlatConfig.Config> = {
+const configs: Record<ConfigKeys, FlatConfig.Config> = {
   recommended: {
     languageOptions: {
       parser: { parse, parseForESLint },
@@ -78,6 +78,6 @@ const plugin: FlatConfig.Plugin & { configs: typeof configs } = {
   configs
 };
 
-Object.assign(configs.recommended["@ilbrando"], plugin)
+configs.recommended.plugins!["@ilbrando"] = plugin;
 
 export default plugin;
