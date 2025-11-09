@@ -36,7 +36,6 @@
     "@typescript-eslint/types": "~7.9.0",
     "@typescript-eslint/utils": "~7.9.0",
     "@typescript-eslint/parser": "~7.9.0",
-    "@typescript-eslint/eslint-plugin": "~7.10.0",
     "@types/eslint-config-prettier": "~6.11.3",
     "@eslint/js": "~9.2.0"
   },
@@ -47,5 +46,7 @@
     "vite": "~6.0.3",
     "vitest": "~2.1.4"
   },
-  "peerDependencies": {}
+  "peerDependencies": {
+    "@typescript-eslint/eslint-plugin": "~7.10.0"
+  }
 }
