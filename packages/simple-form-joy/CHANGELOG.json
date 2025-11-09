@@ -2,6 +2,24 @@
   "name": "@ilbrando/simple-form-joy",
   "entries": [
     {
+      "version": "2.1.9",
+      "tag": "@ilbrando/simple-form-joy_v2.1.9",
+      "date": "Sun, 09 Nov 2025 20:41:21 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `2.1.3`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/simple-form\" to `2.1.3`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/eslint-plugin\" to `1.0.5`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.8",
       "tag": "@ilbrando/simple-form-joy_v2.1.8",
       "date": "Sun, 09 Nov 2025 14:13:21 GMT",

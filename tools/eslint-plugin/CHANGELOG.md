@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/eslint-plugin
 
-This log was last generated on Sun, 09 Nov 2025 14:13:21 GMT and should not be manually modified.
+This log was last generated on Sun, 09 Nov 2025 20:41:21 GMT and should not be manually modified.
+
+## 1.0.5
+Sun, 09 Nov 2025 20:41:21 GMT
+
+### Patches
+
+- Including typescript-eslint plugin in peer dependencies
 
 ## 1.0.4
 Sun, 09 Nov 2025 14:13:21 GMT

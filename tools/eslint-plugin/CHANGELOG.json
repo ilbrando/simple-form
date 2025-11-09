@@ -2,6 +2,18 @@
   "name": "@ilbrando/eslint-plugin",
   "entries": [
     {
+      "version": "1.0.5",
+      "tag": "@ilbrando/eslint-plugin_v1.0.5",
+      "date": "Sun, 09 Nov 2025 20:41:21 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Including typescript-eslint plugin in peer dependencies"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.4",
       "tag": "@ilbrando/eslint-plugin_v1.0.4",
       "date": "Sun, 09 Nov 2025 14:13:21 GMT",
