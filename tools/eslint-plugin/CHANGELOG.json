@@ -2,6 +2,18 @@
   "name": "@ilbrando/eslint-plugin",
   "entries": [
     {
+      "version": "1.0.4",
+      "tag": "@ilbrando/eslint-plugin_v1.0.4",
+      "date": "Sun, 09 Nov 2025 14:13:21 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Build using Vite"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.3",
       "tag": "@ilbrando/eslint-plugin_v1.0.3",
       "date": "Sat, 08 Nov 2025 15:51:44 GMT",

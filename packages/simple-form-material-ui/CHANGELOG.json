@@ -2,6 +2,24 @@
   "name": "@ilbrando/simple-form-material-ui",
   "entries": [
     {
+      "version": "3.0.9",
+      "tag": "@ilbrando/simple-form-material-ui_v3.0.9",
+      "date": "Sun, 09 Nov 2025 14:13:21 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/utils\" to `2.1.2`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/simple-form\" to `2.1.2`"
+          },
+          {
+            "comment": "Updating dependency \"@ilbrando/eslint-plugin\" to `1.0.4`"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.8",
       "tag": "@ilbrando/simple-form-material-ui_v3.0.8",
       "date": "Sat, 08 Nov 2025 15:51:44 GMT",
