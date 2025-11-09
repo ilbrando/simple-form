@@ -3,7 +3,8 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "outDir": "dist",
+    "skipLibCheck": true,
+    "outDir": "lib",
     "baseUrl": "./",
     "paths": { "src": ["src"] }
   },

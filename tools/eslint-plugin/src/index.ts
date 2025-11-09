@@ -4,11 +4,11 @@ import type { FlatConfig } from "@typescript-eslint/utils/ts-eslint";
 import typescriptEslintPlugin from "@typescript-eslint/eslint-plugin";
 import eslintJs from "@eslint/js";
 import eslintPrettierConfig from "eslint-config-prettier";
+import pkg from "../package.json" with { type: "json" };
 
 type ConfigKeys = "recommended";
 
-// note - cannot migrate this to an import statement because it will make TSC copy the package.json to the dist folder
-const { name, version } = require("../package.json") as {
+const { name, version } = pkg as {
   name: string;
   version: string;
 };
