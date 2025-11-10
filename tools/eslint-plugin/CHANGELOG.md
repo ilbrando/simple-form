@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/eslint-plugin
 
-This log was last generated on Mon, 10 Nov 2025 07:52:00 GMT and should not be manually modified.
+This log was last generated on Mon, 10 Nov 2025 10:32:53 GMT and should not be manually modified.
+
+## 1.0.7
+Mon, 10 Nov 2025 10:32:53 GMT
+
+### Patches
+
+- Fix ES lint jsx string rule
 
 ## 1.0.6
 Mon, 10 Nov 2025 07:52:00 GMT

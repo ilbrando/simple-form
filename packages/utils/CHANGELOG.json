@@ -2,6 +2,18 @@
   "name": "@ilbrando/utils",
   "entries": [
     {
+      "version": "2.1.5",
+      "tag": "@ilbrando/utils_v2.1.5",
+      "date": "Mon, 10 Nov 2025 10:32:53 GMT",
+      "comments": {
+        "dependency": [
+          {
+            "comment": "Updating dependency \"@ilbrando/eslint-plugin\" to `1.0.7`"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.4",
       "tag": "@ilbrando/utils_v2.1.4",
       "date": "Mon, 10 Nov 2025 07:52:00 GMT",
