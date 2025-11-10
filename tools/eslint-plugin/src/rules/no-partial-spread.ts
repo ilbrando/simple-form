@@ -20,8 +20,7 @@ export const noPartialSpreadRule = createRule<Options, Messages>({
   meta: {
     type: "suggestion",
     docs: {
-      description: "When a variable is spread, all used elements from it must be included in the spread.",
-      recommended: "recommended"
+      description: "When a variable is spread, all used elements from it must be included in the spread."
     },
     schema: [],
     messages: { spread: "Spread all props (or none of them)." }

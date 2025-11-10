@@ -31,11 +31,11 @@
   },
   "dependencies": {
     "@types/eslint__js": "~8.42.3",
-    "@typescript-eslint/scope-manager": "^7",
-    "@typescript-eslint/visitor-keys": "^7",
-    "@typescript-eslint/types": "~7.9.0",
-    "@typescript-eslint/utils": "~7.9.0",
-    "@typescript-eslint/parser": "~7.9.0",
+    "@typescript-eslint/scope-manager": "~8.46.3",
+    "@typescript-eslint/visitor-keys": "~8.46.3",
+    "@typescript-eslint/types": "~8",
+    "@typescript-eslint/utils": "~8.46.3",
+    "@typescript-eslint/parser": "~8.46.3",
     "@types/eslint-config-prettier": "~6.11.3",
     "@eslint/js": "~9.2.0"
   },
@@ -47,6 +47,6 @@
     "vitest": "~2.1.4"
   },
   "peerDependencies": {
-    "@typescript-eslint/eslint-plugin": "~7.10.0"
+    "@typescript-eslint/eslint-plugin": "^8"
   }
 }

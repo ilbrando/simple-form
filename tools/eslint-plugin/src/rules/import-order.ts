@@ -94,8 +94,7 @@ export const importOrderRule = createRule<Options, Messages>({
   meta: {
     type: "suggestion",
     docs: {
-      description: "Reorders import statements.",
-      recommended: "strict"
+      description: "Reorders import statements."
     },
     schema: [],
     fixable: "code",

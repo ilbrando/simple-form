@@ -26,8 +26,7 @@ export const exportOrderRule = createRule<Options, Messages>({
   meta: {
     type: "suggestion",
     docs: {
-      description: "Reorders `export * from 'foo'` statements.",
-      recommended: "strict"
+      description: "Reorders `export * from 'foo'` statements."
     },
     schema: [],
     fixable: "code",
