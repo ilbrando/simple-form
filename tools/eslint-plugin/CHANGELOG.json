@@ -2,6 +2,18 @@
   "name": "@ilbrando/eslint-plugin",
   "entries": [
     {
+      "version": "1.0.6",
+      "tag": "@ilbrando/eslint-plugin_v1.0.6",
+      "date": "Mon, 10 Nov 2025 07:52:00 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Update @typescript-eslint to v8"
+          }
+        ]
+      }
+    },
+    {
       "version": "1.0.5",
       "tag": "@ilbrando/eslint-plugin_v1.0.5",
       "date": "Sun, 09 Nov 2025 20:41:21 GMT",
