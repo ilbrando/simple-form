@@ -8,8 +8,7 @@ export const preferTypeRule = createRule<Options, Messages>({
   meta: {
     type: "problem",
     docs: {
-      description: "Prefers type over interface.",
-      recommended: "strict"
+      description: "Prefers type over interface."
     },
     schema: [],
     fixable: "code",

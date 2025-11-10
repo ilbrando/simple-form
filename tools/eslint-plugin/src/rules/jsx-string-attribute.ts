@@ -8,8 +8,7 @@ export const jsxStringAttributeRule = createRule<Options, Messages>({
   meta: {
     type: "problem",
     docs: {
-      description: "Don't wrap JSX string value attributes in curly brackets.",
-      recommended: "recommended"
+      description: "Don't wrap JSX string value attributes in curly brackets."
     },
     schema: [],
     messages: { invalidLiteralExpression: "Don't embed constant string in JSX expression." }

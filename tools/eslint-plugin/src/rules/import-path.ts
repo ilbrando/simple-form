@@ -40,8 +40,7 @@ export const importPathRule = createRule<Options, Messages>({
   meta: {
     type: "problem",
     docs: {
-      description: "Prevents too broad imports which can result in circular references.",
-      recommended: "strict"
+      description: "Prevents too broad imports which can result in circular references."
     },
     schema,
     messages: { importPath: "Imports from {{source}} are not allowed. Use a more specific path." }
