@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form
 
-This log was last generated on Mon, 10 Nov 2025 10:32:53 GMT and should not be manually modified.
+This log was last generated on Tue, 11 Nov 2025 11:04:32 GMT and should not be manually modified.
+
+## 2.1.6
+Tue, 11 Nov 2025 11:04:32 GMT
+
+### Patches
+
+- Support React 19
 
 ## 2.1.5
 Mon, 10 Nov 2025 10:32:53 GMT

@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form",
   "entries": [
     {
+      "version": "2.1.6",
+      "tag": "@ilbrando/simple-form_v2.1.6",
+      "date": "Tue, 11 Nov 2025 11:04:32 GMT",
+      "comments": {
+        "patch": [
+          {
+            "comment": "Support React 19"
+          }
+        ]
+      }
+    },
+    {
       "version": "2.1.5",
       "tag": "@ilbrando/simple-form_v2.1.5",
       "date": "Mon, 10 Nov 2025 10:32:53 GMT",
