@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form-material-ui
 
-This log was last generated on Tue, 11 Nov 2025 11:04:32 GMT and should not be manually modified.
+This log was last generated on Sat, 06 Dec 2025 10:49:47 GMT and should not be manually modified.
+
+## 4.0.0
+Sat, 06 Dec 2025 10:49:47 GMT
+
+### Breaking changes
+
+- Updated to React 19
 
 ## 3.0.13
 Tue, 11 Nov 2025 11:04:32 GMT
