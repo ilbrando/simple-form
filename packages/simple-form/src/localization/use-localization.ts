@@ -6,7 +6,7 @@ import { defaultLocale, Formatter, LocalizationContextValue, UseLocalization } f
 
 const defaultContextValue: LocalizationContextValue = { locale: defaultLocale };
 
-export const localizationContext = createContext<LocalizationContextValue | undefined>(undefined);
+export const LocalizationContext = createContext<LocalizationContextValue | undefined>(undefined);
 
 const defaultFormatter: Formatter = value => {
   if (value instanceof Date) return value.toLocaleDateString();
@@ -15,7 +15,7 @@ const defaultFormatter: Formatter = value => {
 };
 
 export const useLocalization = (): UseLocalization => {
-  const context = useContext(localizationContext) ?? defaultContextValue;
+  const context = useContext(LocalizationContext) ?? defaultContextValue;
 
   const format = context.format ?? defaultFormatter;
 
