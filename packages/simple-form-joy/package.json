@@ -38,8 +38,8 @@
   },
   "devDependencies": {
     "@ilbrando/eslint-plugin": "workspace:*",
-    "@playwright/experimental-ct-react": "~1.56.1",
-    "@playwright/test": "~1.56.1",
+    "@playwright/experimental-ct-react": "~1.57.0",
+    "@playwright/test": "~1.57.0",
     "@types/node": "~20.12.12",
     "@types/react": "~19.2.7",
     "@types/react-dom": "~19.2.3",
