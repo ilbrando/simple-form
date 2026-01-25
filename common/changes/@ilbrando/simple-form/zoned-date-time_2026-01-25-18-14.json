@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form",
+      "comment": "Support ZonedDateTime in validation rules",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form"
+}
