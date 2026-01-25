@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form
 
-This log was last generated on Sat, 06 Dec 2025 10:49:47 GMT and should not be manually modified.
+This log was last generated on Sun, 25 Jan 2026 19:40:39 GMT and should not be manually modified.
+
+## 3.1.0
+Sun, 25 Jan 2026 19:40:39 GMT
+
+### Minor changes
+
+- Support ZonedDateTime in validation rules
 
 ## 3.0.0
 Sat, 06 Dec 2025 10:49:47 GMT

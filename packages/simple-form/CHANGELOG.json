@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form",
   "entries": [
     {
+      "version": "3.1.0",
+      "tag": "@ilbrando/simple-form_v3.1.0",
+      "date": "Sun, 25 Jan 2026 19:40:39 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "Support ZonedDateTime in validation rules"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.0.0",
       "tag": "@ilbrando/simple-form_v3.0.0",
       "date": "Sat, 06 Dec 2025 10:49:47 GMT",
