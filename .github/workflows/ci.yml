@@ -19,9 +19,16 @@ jobs:
       - name: Rush rebuild
         run: node common/scripts/install-run-rush.js rebuild --verbose
       - name: Install Playwright Browsers
-        run: npx playwright install --with-deps
+        run: npx playwright@1.57.0 install --with-deps
       - name: Rush test
         run: node common/scripts/install-run-rush.js test
+      - name: Upload Playwright report - simple-form-jou
+        uses: actions/upload-artifact@v4
+        if: ${{ ! cancelled() }} # Ensures artifacts upload even on failure
+        with:
+          name: playwright-report-simple-form-joy
+          path: packages/simple-form-joy/playwright-report/
+          retention-days: 30
       - name: Rush eslint
         run: node common/scripts/install-run-rush.js eslint
       - name: Verify Change Logs
