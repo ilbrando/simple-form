@@ -31,7 +31,6 @@ describe("date-time", () => {
 
     // Act
     const actual = result.current.timeWholeHourZoned()(value);
-    console.log({ actual, expected });
 
     // Assert
     assertValidationResult(expected, actual);
