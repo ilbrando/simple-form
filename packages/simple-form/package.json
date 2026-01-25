@@ -53,6 +53,7 @@
     "@ilbrando/utils": "workspace:*"
   },
   "peerDependencies": {
-    "react": ">=19"
+    "react": ">=19",
+    "@internationalized/date": ">=3.10.1"
   }
 }
