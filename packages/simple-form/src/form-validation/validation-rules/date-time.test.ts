@@ -1,5 +1,5 @@
 import { describe, test } from "vitest";
-import { parseZonedDateTime, ZonedDateTime } from "@internationalized/date";
+import { parseTime, parseZonedDateTime, Time, ZonedDateTime } from "@internationalized/date";
 import { renderHook } from "@testing-library/react";
 
 import { useDateTimeValidationRules } from "./date-time";
@@ -127,6 +127,38 @@ describe("date-time", () => {
 
     // Act
     const actual = result.current.maxDateZoned(parameter)(value);
+
+    // Assert
+    assertValidationResult(expected, actual);
+  });
+
+  test.each`
+    value                 | parameter             | expected
+    ${parseTime("14:15")} | ${parseTime("14:00")} | ${undefined}
+    ${parseTime("14:15")} | ${parseTime("14:15")} | ${undefined}
+    ${parseTime("14:15")} | ${parseTime("15:00")} | ${genericErrorMessage}
+  `("minTime($value) => $expected", ({ value, parameter, expected }: { value: Time; parameter: Time; expected: string | undefined }) => {
+    // Arrange
+    const { result } = renderHook(() => useDateTimeValidationRules());
+
+    // Act
+    const actual = result.current.minTime(parameter)(value);
+
+    // Assert
+    assertValidationResult(expected, actual);
+  });
+
+  test.each`
+    value                 | parameter             | expected
+    ${parseTime("14:15")} | ${parseTime("15:00")} | ${undefined}
+    ${parseTime("14:15")} | ${parseTime("14:15")} | ${undefined}
+    ${parseTime("14:15")} | ${parseTime("14:00")} | ${genericErrorMessage}
+  `("maxTime($value) => $expected", ({ value, parameter, expected }: { value: Time; parameter: Time; expected: string | undefined }) => {
+    // Arrange
+    const { result } = renderHook(() => useDateTimeValidationRules());
+
+    // Act
+    const actual = result.current.maxTime(parameter)(value);
 
     // Assert
     assertValidationResult(expected, actual);

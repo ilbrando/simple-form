@@ -1,4 +1,5 @@
 import { Maybe } from "@ilbrando/utils";
+import { Time } from "@internationalized/date";
 
 import { Formatter, LocalizationTexts } from "../localization-types";
 
@@ -16,6 +17,8 @@ export const enUS = (format: Formatter): LocalizationTexts => ({
   timeWholeMinute: (minute: number) => `The time must be a whole ${format(minute)} minute.`,
   minDate: (minValue: Date) => `Must be greater than or equal to ${format(minValue)}.`,
   maxDate: (maxValue: Date) => `Must be less than or equal to ${format(maxValue)}.`,
+  minTime: (minValue: Time) => `Must be greater than or equal to ${format(minValue)}.`,
+  maxTime: (maxValue: Time) => `Must be less than or equal to ${format(maxValue)}.`,
   email: "Invalid email address.",
   min: (minValue: number) => `Must be at least ${format(minValue)}.`,
   max: (maxValue: number) => `Can at most be ${format(maxValue)}.`,

@@ -18,5 +18,6 @@
     }
   ],
   "git.branchProtection": ["main"],
-  "cSpell.words": ["ilbrando"]
+  "cSpell.words": ["ilbrando"],
+  "cSpell.enabled": false
 }
