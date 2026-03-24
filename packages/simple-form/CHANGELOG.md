@@ -1,6 +1,13 @@
 # Change Log - @ilbrando/simple-form
 
-This log was last generated on Sun, 25 Jan 2026 19:40:39 GMT and should not be manually modified.
+This log was last generated on Tue, 24 Mar 2026 20:03:51 GMT and should not be manually modified.
+
+## 3.2.0
+Tue, 24 Mar 2026 20:03:51 GMT
+
+### Minor changes
+
+- New validation rules minTime and maxTime
 
 ## 3.1.0
 Sun, 25 Jan 2026 19:40:39 GMT

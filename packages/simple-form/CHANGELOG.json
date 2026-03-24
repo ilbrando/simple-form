@@ -2,6 +2,18 @@
   "name": "@ilbrando/simple-form",
   "entries": [
     {
+      "version": "3.2.0",
+      "tag": "@ilbrando/simple-form_v3.2.0",
+      "date": "Tue, 24 Mar 2026 20:03:51 GMT",
+      "comments": {
+        "minor": [
+          {
+            "comment": "New validation rules minTime and maxTime"
+          }
+        ]
+      }
+    },
+    {
       "version": "3.1.0",
       "tag": "@ilbrando/simple-form_v3.1.0",
       "date": "Sun, 25 Jan 2026 19:40:39 GMT",
