@@ -1,4 +1,5 @@
 import { Maybe } from "@ilbrando/utils";
+import { Time } from "@internationalized/date";
 
 import { Formatter, LocalizationTexts } from "../localization-types";
 
@@ -16,6 +17,8 @@ export const daDK = (format: Formatter): Partial<LocalizationTexts> => ({
   timeWholeMinute: (minute: number) => `Klokkeslet skal være hvert ${format(minute)}. minut.`,
   minDate: (minValue: Date) => `Skal være større end eller lig med ${format(minValue)}.`,
   maxDate: (maxValue: Date) => `Skal være mindre end eller lig med ${format(maxValue)}.`,
+  minTime: (minValue: Time) => `Skal være større end eller lig med ${format(minValue)}.`,
+  maxTime: (maxValue: Time) => `Skal være mindre end eller lig med ${format(maxValue)}.`,
   email: "Ugyldig mail adresse.",
   min: (minValue: number) => `Skal være mindst ${format(minValue)}.`,
   max: (maxValue: number) => `Må højst være ${format(maxValue)}.`,

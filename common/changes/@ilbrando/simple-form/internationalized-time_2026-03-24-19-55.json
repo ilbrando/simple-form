@@ -1,0 +1,10 @@
+{
+  "changes": [
+    {
+      "packageName": "@ilbrando/simple-form",
+      "comment": "New validation rules minTime and maxTime",
+      "type": "minor"
+    }
+  ],
+  "packageName": "@ilbrando/simple-form"
+}

@@ -1,5 +1,5 @@
 import { hasValue } from "@ilbrando/utils";
-import { ZonedDateTime } from "@internationalized/date";
+import { Time, ZonedDateTime } from "@internationalized/date";
 
 import { useLocalization } from "src/localization";
 
@@ -43,9 +43,20 @@ export const useDateTimeValidationRules = () => {
       (max: Date, errorMessage?: string): Validator<Date> =>
       value =>
         hasValue(value) && value > max ? (errorMessage ?? texts.maxDate(max)) : undefined,
+
     maxDateZoned:
       (max: ZonedDateTime, errorMessage?: string): Validator<ZonedDateTime> =>
       value =>
-        hasValue(value) && value > max ? (errorMessage ?? texts.maxDate(max.toDate())) : undefined
+        hasValue(value) && value > max ? (errorMessage ?? texts.maxDate(max.toDate())) : undefined,
+
+    minTime:
+      (min: Time, errorMessage?: string): Validator<Time> =>
+      value =>
+        hasValue(value) && value < min ? (errorMessage ?? texts.minTime(min)) : undefined,
+
+    maxTime:
+      (max: Time, errorMessage?: string): Validator<Time> =>
+      value =>
+        hasValue(value) && value > max ? (errorMessage ?? texts.maxTime(max)) : undefined
   };
 };

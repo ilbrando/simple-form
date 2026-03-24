@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Maybe } from "@ilbrando/utils";
+import { Time } from "@internationalized/date";
 
 export const defaultLocale = "enUS";
 
@@ -23,6 +24,8 @@ export type LocalizationTexts = {
   timeWholeMinute: (minute: number) => string;
   minDate: (minValue: Date) => string;
   maxDate: (maxValue: Date) => string;
+  minTime: (minValue: Time) => string;
+  maxTime: (maxValue: Time) => string;
   email: string;
   min: (minValue: number) => string;
   max: (maxValue: number) => string;
